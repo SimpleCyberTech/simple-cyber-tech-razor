@@ -1,0 +1,192 @@
+/* Page Styles */
+.section-mt {
+    padding-top: 6rem;
+}
+
+/* Hero Section */
+#HeroSection {
+    max-height: 600px;
+}
+
+/* Parallax Styles */
+.parallax-bg-1 {background-image: url("/img/oc-it-solutions-with-secure-circle-and-shield-horizontal.jpg");}
+.parallax-bg-2 {background-image: url("/img/background_5.jpg");}
+
+.parallax-group {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    padding-bottom: 6rem;
+}
+
+/* Parallax Background Opacity */
+.parallax-group::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: 0;
+}
+
+.parallax-group > section {
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-group .container {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+/* Protect Your Business */
+#ProtectYourBusiness .card {
+    background-color: transparent;
+}
+@media (max-width: 1199px) {
+    #ProtectYourBusiness .card-body {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Three Pillars Section */
+#ThreePillars h1,
+#ThreePillars p {
+    padding-bottom: 1rem;
+}
+#ThreePillars .card {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+}
+#ThreePillars .card img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#ThreePillars .card-title {
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Local Cybersecurity Section */
+#LocalCybersecurity h1,
+#LocalCybersecurity p {
+    padding-bottom: 1rem;
+}
+#LocalCybersecurity .card {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+}
+#LocalCybersecurity .card img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#LocalCybersecurity .card-title {
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Help Desk Support Section */
+#HelpDeskSupport .card {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.20);
+    border-left-color: var(--sct-maroon);
+    border-left-width: 1rem;
+}
+
+#HelpDeskSupport .card-title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Managed Cybersecurity Section */
+#ManagedCybersecurity .card {
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#ManagedCybersecurity .card-title {
+    display: flex;
+    align-items: top;
+    color: var(--sct-beige);
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
+
+
+/* Media Queries */
+
+/* Size - Extra Small (XS: <576) */
+@media (max-width: 575px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 600px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+
+    /* Parallax Styles */
+    .parallax-group { padding: 0 1rem 3rem; }
+}
+
+/* Size - Small (SM: 576-768) */
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 650px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+}
+
+/* Size - Medium (MD: 768-992) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 800px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+}
+
+/* Size - Large (LG: 992-1200) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 600px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+}
+
+/* Size - Extra Large (XL: 1200-1400) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 600px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+}
+
+/* Size - 2x Extra Large (XXL: >1400) */
+@media (min-width: 1400px) {
+    /* Page Styles */
+    .section-mt { padding-top: 3rem; }
+
+    /* Hero Section */
+    #HeroSection { max-height: 700px; }
+    .hero-jumbotron { padding: 0 1rem !important; }
+}

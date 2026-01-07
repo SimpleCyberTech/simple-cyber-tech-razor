@@ -1,0 +1,203 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<section id="HeroSection" class="container-fluid position-relative mw-100 w-100 vh-100 text-center mx-auto p-0 overflow-hidden">
+    <video autoPlay loop muted playsInline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-1">
+        <source src="/video/line-background-video.mp4" type="video/mp4" />
+    </video>
+    <div id="HeroOpacity" class="position-absolute d-flex align-items-center justify-content-center top-0 start-0 w-100 h-100 bg-black/25 z-2" aria-hidden="true" />       
+    <div class="container hero-jumbotron z-3">
+        <h1 class="text-uppercase mb-3">CyberSecurity, Technology and Help Desk Simplified</h1>
+        <h3 class="fst-italic my-3">We protect Southern California's small and medium size businesses with stress and jargon free security you can trust. No technical gibberish, just clear solutions that keep your business safe from digital threats.</h3>
+        <a href="#" class="no-underline">
+            <button class="py-3 px-5 my-3">Book Your Free Security Review</button>
+        </a>
+    </div>
+</section>
+
+@* Parallax Section 1 *@
+<div class="parallax-group parallax-bg-1">
+    <section id="ProtectYourBusiness" class="section-mt w-100 mx-auto">
+        <div class="container">
+            <h2 class="text-center mb-5">Protect Your Business While Keeping Your Peace of Mind</h2>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="d-none d-xl-block col-xl-3 overflow-hidden">
+                        <img src="/img/costa-mesa-building-large.jpg" alt="Protect your business" class="img-fluid h-100 object-fit-cover rounded" />
+                    </div>
+                    <div class="col-xl-9 ps-xl-4">
+                        <div class="card-body py-xl-0">
+                            <p class="card-text pb-3">We believe that robust cybersecurity shouldn't be a privilege for large corporations. Our passion is empowering Southern California's small and medium size businesses with security that’s easy to understand and simple to implement.</p>
+                            <p class="card-text pb-3">We cut through the technical jargon, providing clear, effective protection so you can focus on what you do best: growing your business securely. Our ultimate goal is to empower your success, without the stress of digital threats.</p>
+                            <p class="card-text pb-3">We offer a comprehensive suite of cybersecurity services tailored to the unique needs of Orange County businesses. From proactive threat detection to rapid incident response, we provide robust protection without the complexity.</p>
+                            <p class="card-text">Our local team ensures you receive personalized, hands-on support, making advanced cyber security accessible and effective for every small and medium size business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ThreePillars" class="section-mt w-100 mx-auto">
+        <div class="container text-center">
+            <h2 class="mb-3">Three Pillars of Protection</h2>
+            <p class="mb-3">We offer comprehensive cybersecurity and IT support services designed specifically for Southern California small and medium size businesses. Our approach combines enterprise-grade protection with small business friendliness.</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/man-in-suit-holding-cyber-security-shield.jpg" alt="A man in a buisness suit holding a digital shield representing cybersecurity.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Managed Cybersecurity</h3>
+                            <p class="card-text">Our always-on protection services safeguard your business from the ever-evolving threat landscape. We implement robust security measures, monitor your systems 24/7, and respond rapidly to potential threats.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/man-and-woman-reviewing-on-a-monitor.jpg" alt="A man and woman in professional clothing are looking at a computer monitor on a desk as if they are reviewing something.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Help Desk</h3>
+                            <p class="card-text">Get immediate assistance from real humans who understand your business needs. We provide fast, friendly IT support for everything from email issues to software glitches, ensuring your operations run smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/security-lab-with-man-reviewing-monitors.jpg" alt="A man in a buisness suit holding a digital shield representing cybersecurity.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Penetration Testing</h3>
+                            <p class="card-text">Our ethical hackers think like the bad guys, but work for you. We find security gaps before attackers do, giving you actionable insights to strengthen your defenses and protect your valuable business data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Each of our services is delivered with the same commitment to clarity and effectiveness. We don't just implement technical solutions; we ensure you understand how they protect your business and contribute to your success.</p>
+        </div>
+    </section>
+
+    <section id="LocalCybersecurity" class="section-mt w-100 mx-auto">
+        <div class="container text-center">
+            <h2 class="mb-3">Local Cybersecurity for Southern California Businesses</h2>
+            <p class="mb-3">We know Southern California small and medium size businesses need more than technical know-how, you need a trusted security partner who communicates clearly. From Irvine startups to long-time Newport Beach retailers, we offer cybersecurity and IT support that’s simple and straightforward.</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/oc-local-map.jpg" alt="Aerial view map of Orange County, California highlighting local businesses.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Local</h3>
+                            <p class="card-text">Rooted in Orange County, we understand the distinct needs of businesses in Southern California.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/office-working-looking-in-distance.jpg" alt="A man and woman in professional clothing are looking at a computer monitor on a desk as if they are reviewing something.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">No Cyberspeak</h3>
+                            <p class="card-text">A woman dressed in professional clothing looking thoughtfully into the distance in an office setting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="overflow-hidden">
+                            <img src="/img/cyber-team-looking-at-monitors.jpg" alt="Two men in business casual clothes in an office setting looking at multiple computer monitors displaying security data.">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fast Response</h3>
+                            <p class="card-text">When security threats happen, our team acts swiftly to contain risks and keep your business running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>We are more than a cybersecurity vendor. We're your local digital guardians, protecting Southern California businesses with no-nonsense security solutions, even if you’re not a tech expert.</p>
+        </div>
+    </section>
+</div>
+
+@* Parallax Section 2 *@
+<div class="parallax-group parallax-bg-2">
+    <section id="HelpDeskSupport" class="section-mt w-100 mx-auto">
+        <div class="container">
+            <h2 class="text-center mb-3">Help Desk: Friendly, Fast Support When You Need It</h2>
+            <p class="text-center mb-3">When technology issues strike, the last thing you need is to waste time navigating complicated phone trees or explaining your problem to someone who doesn't understand your business. Our Orange County-based help desk team delivers prompt, friendly support that gets you back to business quickly.</p>
+            <div class="py-3">    
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Contact Us</h3>
+                        <p class="card-text">Reach out via phone, email, or our client portal. No matter how you contact us, you'll always reach a real person who's ready to help — not a robot or an overseas call center.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quick Triage</h3>
+                        <p class="card-text">We quickly assess your issue to determine the fastest path to resolution. Critical business functions always receive priority attention to minimize downtime.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Penetration Testing</h3>
+                        <p class="card-text">Our ethical hackers think like the bad guys, but work for you. We find security gaps before attackers do, giving you actionable insights to strengthen your defenses and protect your valuable business data.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center pt-3">Each of our services is delivered with the same commitment to clarity and effectiveness. We don't just implement technical solutions; we ensure you understand how they protect your business and contribute to your success.</p>
+        </div>
+    </section>
+
+    <section id="ManagedCybersecurity" class="section-mt w-100 mx-auto">
+        <div class="container">
+            <h2 class="text-center mb-3">Managed Cybersecurity You Can Actually Understand</h2>
+            <p class="text-center mb-3">In today's digital landscape, cybersecurity isn't optional — but it doesn't have to be overwhelming. Our managed cybersecurity services provide comprehensive protection for Orange County small businesses without the technical jargon and complexity.</p>
+            <p class="text-center mb-3">What truly sets our cybersecurity services apart is transparency. We provide regular, easy-to-understand security reports that clearly explain your protection status, potential vulnerabilities, and recommended actions — all without technical jargon that leaves you more confused than confident.</p>
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Advanced Threat Detection</h3>
+                            <p class="card-text">We deploy enterprise-grade EDR (Endpoint Detection and Response) solutions that continuously monitor your systems for suspicious activity and automatically respond to threats.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Proactive System Management</h3>
+                            <p class="card-text">Our team handles critical security updates, patches, and system maintenance to eliminate vulnerabilities before attackers can exploit them.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Data Protection & Recovery</h3>
+                            <p class="card-text">We implement robust backup solutions that ensure your critical business data can be quickly recovered in the event of ransomware, hardware failure, or other disasters.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Email & Web Security</h3>
+                            <p class="card-text">We protect your primary attack vectors with advanced filtering that blocks phishing attempts, malicious attachments, and dangerous websites before they reach your team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center pt-5">Our comprehensive security approach protects Orange County, Los Angeles and San Diego businesses from today's sophisticated cyber threats.</p>
+        </div>
+    </section>
+</div>

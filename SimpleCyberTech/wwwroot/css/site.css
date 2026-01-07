@@ -1,0 +1,207 @@
+:root {
+  /* Define Brand Colors */
+  --sct-charcoal: #2F3A3A;
+  --sct-maroon: #5C0606;
+  --sct-blue: #0A3D62;
+  --sct-silver: #C0C0C0;
+  --sct-beige: #DDC8AD;
+  --sct-roasted: #1C1410;
+  --sct-cocoa: #2D221B;
+  --sct-espresso: #0B0B06;
+
+  /* Define the Font Family Variable Names & Weight */
+  --font-header: "Black Ops One", system-ui;
+  --font-subheader: "Oswald", sans-serif;
+  --font-regular: "Raleway", sans-serif;
+}
+
+/* Custom Brand Background Colors */
+.bg-sct-charcoal {
+  background-color: var(--sct-charcoal);
+}
+.bg-sct-maroon {
+  background-color: var(--sct-maroon);
+}
+.bg-sct-blue {
+  background-color: var(--sct-blue);
+}
+.bg-sct-silver {
+  background-color: var(--sct-silver);
+}
+.bg-sct-beige {
+  background-color: var(--sct-beige);
+}
+
+/* Custom Brand Text Colors */
+.text-sct-charcoal {
+  color: var(--sct-charcoal);
+}
+.text-sct-maroon {
+  color: var(--sct-maroon);
+}
+.text-sct-blue {
+  color: var(--sct-blue);
+}
+.text-sct-silver {
+  color: var(--sct-silver);
+}
+.text-sct-beige {
+  color: var(--sct-beige);
+}
+
+/* Custom Fonts */
+.font-header { font-family: var(--font-header); }
+.font-subheader { font-family: var(--font-subheader); }
+.font-regular { font-family: var(--font-regular); }
+
+/* Header Titles */
+  h1 {
+    font-family: var(--font-header);
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--sct-silver);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: var(--font-header);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-family: var(--font-subheader);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.375;
+    color: var(--sct-beige);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-subheader);
+    font-weight: 600;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+/* Global Styles */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: var(--font-regular);
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+p {
+  font-family: var(--font-regular);
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--sct-beige);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--sct-silver);
+}
+
+button {
+  border: none;
+  margin: 0;
+  font-family: var(--font-regular);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--sct-blue);
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--sct-maroon);
+}
+
+/* Size - Extra Small (XS: <576) */
+@media (max-width: 575px) {
+  /* Text Heading Sizes */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  
+  /* Header Section */
+  .navbar-logo {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Footer Section */
+  .footer-top {
+    padding: 1rem;
+  }
+  .footer-logo {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Size - Small (SM: 576-768) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Text Heading Sizes */
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2rem; }
+}
+
+/* Size - Medium (MD: 768-992) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Text Heading Sizes */
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 3rem; }
+  h3 { font-size: 2.5rem; }
+}
+
+/* Size - Large (LG: 992-1200) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Text Heading Sizes */
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 3rem; }
+  h3 { font-size: 2.5rem; }
+}
+
+/* Size - Extra Large (XL: 1200-1400) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* Text Heading Sizes */
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3.5rem; }
+  h3 { font-size: 2.5rem; }
+}
+
+/* Size - 2x Extra Large (XXL: >1400) */
+@media (min-width: 1400px) {}
