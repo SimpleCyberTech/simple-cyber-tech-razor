@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="font-roboto-regular">
-    <header>
-        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-dark bg-sct-espresso px-3">
+<body class="font-roboto-regular bg-white">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-dark px-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="/img/logo-company-name-horizontal-dark.png" alt="Bootstrap" class="navbar-logo" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -23,30 +23,34 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-center fs-5 text-uppercase" id="navbarNavDropdown">
                     <ul class="navbar-nav pt-5 pt-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Our Services
                             </a>
                             <ul class="dropdown-menu bg-sct-charcoal fs-5 px-3">
-                                <li><a class="dropdown-item text-sct-silver" href="#">Cybersecurity</a></li>
-                                <li><a class="dropdown-item text-sct-silver" href="#">IT/Help Desk Support</a></li>
+                                <li><a class="dropdown-item text-sct-silver" href="/Services-Overview">Overview</a></li>
+                                <li><a class="dropdown-item text-sct-silver" href="/Services-Cybersecurity">Cybersecurity</a></li>
+                                <li><a class="dropdown-item text-sct-silver" href="/Services-Technology">IT/Help Desk Support</a></li>
                             </ul>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="/About">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="/Contact">Contact Us</a>
                         </li>
                         <li class="nav-item d-xl-none">
                             <a href="#">
-                                <button class="w-100 py-3 my-5">Schedule a Call</button>
+                                <button class="w-100 py-3 my-5" style="max-width: 500px;">Schedule a Call</button>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <a href="#" class="d-none d-xl-block">
-                    <button class="py-3 px-5">Schedule a Call</button>
+                    <button class="fs-6 px-3 py-2">Schedule a Call</button>
                 </a>
             </div>
         </nav>
