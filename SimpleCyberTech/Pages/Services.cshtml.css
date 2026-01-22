@@ -12,7 +12,7 @@
 }
 
 /* Parallax Styles */
-.parallax-bg { background-image: url("/img/oc-it-solutions-with-secure-circle-and-shield-horizontal.jpg"); }
+.parallax-bg { background-image: url("/img/background_5.jpg"); }
 
 .parallax-group {
     position: relative;
@@ -41,39 +41,6 @@
 .parallax-group .container {
     background: rgba(0, 0, 0, 0.25);
     padding: 1rem;
-}
-
-/* Protect Your Business */
-#ProtectYourBusiness .card {
-    background-color: transparent;
-}
-@media (max-width: 1199px) {
-    #ProtectYourBusiness .card-body {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-}
-
-/* Three Pillars Section */
-#ThreePillars h1,
-#ThreePillars p {
-    padding-bottom: 1rem;
-}
-#ThreePillars .card {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: transparent;
-}
-#ThreePillars .card img {
-    width: 100%;
-    max-width: 250px;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-#ThreePillars .card-title {
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 /* Local Cybersecurity Section */

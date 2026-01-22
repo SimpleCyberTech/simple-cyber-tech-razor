@@ -4,16 +4,372 @@
     ViewData["Title"] = "About Us";
 }
 
-<section id="HeroSection" class="position-relative vh-100 text-center">
-    @* <video autoPlay loop muted playsInline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
-        <source src="/video/line-background-video.mp4" type="video/mp4" />
+<!-- 1. HERO SECTION -->
+<section id="HeroSection" class="position-relative vh-100 text-center d-flex align-items-center justify-content-center">
+    <video autoPlay loop muted playsInline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hero-video">
+        <source src="/video/orange-county-flyover-about-us.mp4" type="video/mp4" />
     </video>
-    <div class="position-absolute d-flex align-items-center justify-content-center top-0 start-0 w-100 h-100" aria-hidden="true" /> *@
-    <div class="container hero-jumbotron">
-        <h1 class="text-uppercase mb-3">Your Trusted Southern California Technology Guardian</h1>
-        <h3 class="fst-italic my-3">Enterprise-grade cybersecurity and IT support delivered with clarity, honesty, and a human touch. We protect your business, so you can focus on growth.</h3>
-        <a href="#" class="no-underline">
-            <button class="py-3 px-5 my-3">Book Your Free Security Review</button>
-        </a>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-jumbotron hero-content position-relative">
+        <h1 class="text-uppercase mb-3">Your Trusted Technology Guardian</h1>
+        <h3 class="fst-italic my-3">Enterprise-grade cybersecurity, IT Services and Help Desk Support delivered with clarity, honesty, and a human touch. We protect your business, so you can focus on growth.</h3>
+    </div>
+</section>
+
+<!-- 2. OUR STORY -->
+<section id="OurStory" class="section-mt w-100 mx-auto">
+    <div class="container">
+        <h2 class="text-center mb-3">Our Story</h2>
+        <h3 class="text-center mb-5">Born from Frustration. Built for Southern California and Beyond.</h3>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-xl-8 ps-xl-4">
+                    <div class="card-body py-xl-0">
+                        <p class="card-text pb-3">Simple Cyber Technology was founded after watching too many businesses suffer from completely preventable cyber incidents.</p>
+                        <p class="card-text pb-3">Working in corporate IT, we kept seeing the same pattern: businesses were overwhelmed by conflicting advice, impenetrable reports, and providers who spoke in acronyms instead of answers.  They all asked the same question:</p>
+                        <blockquote class="border-start border-warning border-3 ps-3 fst-italic mb-3 text-white">"How do I protect my business without an enterprise budget or a computer science degree?"</blockquote>
+                        <p class="card-text pb-3">Simple Cyber Technology was our answer—a security partner we'd want for our own business.</p>
+                        <p class="card-text">
+                            <ul class="mb-4 text-light text-opacity-75">
+                                <li class="mb-1"><strong class="text-white"> Reachable & Human</strong> when something goes wrong.</li>
+                                <li class="mb-1"><strong class="text-white">Honest & Transparent</strong> about what you really need.</li>
+                                <li class="mb-1"><strong class="text-white">Patient & Clear</strong> in every explanation we give.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-4 overflow-hidden">
+                    <img src="/img/metro-point-aerial.jpg" alt="Aerial view of Metro Point and South Coast Plaza" class="img-fluid h-100 object-fit-cover rounded" />
+                </div>
+            </div>
+        </div>
+        <p class="text-center mb-5">Today, we serve business from small and mid-sized organizations enterprise and government across Southern California, helping them build security and technology that actually works in the real world.</p>
+    </div>
+</section>
+
+<!-- 3. OUR VALUES -->
+<section id="OurValues" class="py-5 py-lg-5" style="background-color: #1a1a1a;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="text-center mb-3">Our Values</h2>
+            <h3 class="text-center mb-5">What You Can Count On When You Work With Us</h3>
+            <p>Technology changes fast, but our commitment to how we serve you stays the same. Every recommendation, project, and support call is guided by these values.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Clarity -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow border-0 rounded-4 bg-dark text-white">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-sct-maroon text-sct-beige" style="width: 75px; height: 75px;">
+                                <i class="fa-solid fa-book-journal-whills fs-1"></i>
+                            </span>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2 text-white">Clarity</h3>
+                        <p class="mb-0 text-light text-opacity-75">
+                            We translate complex security concepts into plain English so you 
+                            always understand what we're doing, why, and the risks it addresses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow border-0 rounded-4 bg-dark text-white">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-sct-maroon text-sct-beige" style="width: 75px; height: 75px;">
+                                <i class="fa-solid fa-user-shield fs-1"></i>
+                            </span>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2 text-white">Trust</h3>
+                        <p class="mb-0 text-light text-opacity-75">
+                            We don't sell fear. We'll never recommend tools you don't need or exaggerate threats just to close a deal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Care -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow border-0 rounded-4 bg-dark text-white">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-sct-maroon text-sct-beige" style="width: 75px; height: 75px;">
+                                <i class="fa-solid fa-map-location-dot fs-1"></i>
+                            </span>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2 text-white">Local Care</h3>
+                        <p class="mb-0 text-light text-opacity-75">
+                            We live and work where you do. As Orange County natives, we 
+                            understand the pace and challenges of local businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accountability -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow border-0 rounded-4 bg-dark text-white">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-sct-maroon text-sct-beige" style="width: 75px; height: 75px;">
+                                <i class="fa-solid fa-check-square fs-1"></i>
+                            </span>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2 text-white">Accountability</h3>
+                        <p class="mb-0 text-light text-opacity-75">
+                            We stand behind our work with clear response times, transparent 
+                            reporting, and measurable results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. HOW WE WORK (PROCESS + MISSION/VISION) -->
+<section id="HowWeWork" class="py-5 py-lg-5 bg-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <p class="text-uppercase small fw-semibold text-warning mb-2">
+                How We Work
+            </p>
+            <h2 class="h1 fw-bold mb-3 text-white">
+                A Clear, Four-Step Path to Stronger Security
+            </h2>
+            <p class="text-light text-opacity-75 mb-0">
+                We built our process to be simple, transparent, and low-stress—especially 
+                if you've had a bad experience with IT providers in the past.
+            </p>
+        </div>
+
+        <div class="row g-5 align-items-start">
+            <!-- Process Steps -->
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <!-- Step 1 -->
+                    <div class="col-12 d-flex">
+                        <div class="me-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning text-dark fw-bold" style="width: 40px; height: 40px;">
+                                1
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1 text-white">Listen &amp; Understand</h3>
+                            <p class="mb-0 text-light text-opacity-75">
+                                We start with a conversation—no scripts, no pressure. We learn 
+                                how your business operates, what systems you rely on, and what 
+                                keeps you up at night.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 d-flex">
+                        <div class="me-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning text-dark fw-bold" style="width: 40px; height: 40px;">
+                                2
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1 text-white">Assess &amp; Prioritize</h3>
+                            <p class="mb-0 text-light text-opacity-75">
+                                We review your current security posture and IT setup, identify 
+                                real-world risks, and prioritize them based on impact and 
+                                likelihood—not just headlines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 d-flex">
+                        <div class="me-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning text-dark fw-bold" style="width: 40px; height: 40px;">
+                                3
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1 text-white">Implement Practical Protections</h3>
+                            <p class="mb-0 text-light text-opacity-75">
+                                We design and deploy solutions that fit your size, budget, 
+                                and compliance needs—backups, access controls, monitoring, 
+                                user training, and more.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-12 d-flex">
+                        <div class="me-3">
+                            <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning text-dark fw-bold" style="width: 40px; height: 40px;">
+                                4
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1 text-white">Monitor, Support &amp; Improve</h3>
+                            <p class="mb-0 text-light text-opacity-75">
+                                Cybersecurity isn't a one-time project. We continuously monitor, 
+                                update, and fine-tune your protections while keeping you informed 
+                                with human-friendly updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="col-lg-5">
+                <div class="card border-0 shadow rounded-4 h-100" style="background-color: #1a1a1a;">
+                    <div class="card-body p-4">
+                        <p class="text-uppercase small fw-semibold text-warning mb-2">
+                            Mission &amp; Vision
+                        </p>
+                        <h3 class="h5 fw-bold mb-3 text-white">Why We Do What We Do</h3>
+
+                        <h4 class="h6 fw-bold mb-1 text-white">Our Mission</h4>
+                        <p class="mb-3 text-light text-opacity-75">
+                            To provide Orange County small and mid-sized businesses with 
+                            enterprise-grade cybersecurity and IT support delivered with 
+                            clarity, honesty, and a human touch.
+                        </p>
+
+                        <h4 class="h6 fw-bold mb-1 text-white">Our Vision</h4>
+                        <p class="mb-0 text-light text-opacity-75">
+                            A local business community where owners no longer fear technology 
+                            or cyber threats, but instead use them confidently to grow and innovate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-story" class="page-wrapper-background cyber-section cyber-nodes cyber-hexes py-5">
+    <div class="container-xxl">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="glass-panel p-4 p-md-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-7">
+                            <p class="eyebrow text-uppercase text-cyber-accent fw-semibold mb-2">
+                                Our Story
+                            </p>
+                            <h2 class="display-5 fw-bold text-light mb-3">
+                                Born from Frustration. Built for Southern California and Beyond.
+                            </h2>
+                            <p class="lead text-light-muted mb-3">
+                                Simple Cyber Technology was founded after watching too many businesses
+                                suffer from completely preventable cyber incidents.
+                            </p>
+                            <p class="text-light-muted mb-3">
+                                Working in corporate IT, we kept seeing the same pattern: businesses were
+                                overwhelmed by conflicting advice, impenetrable reports, and providers
+                                who spoke in acronyms instead of answers.
+                            </p>
+
+                            <blockquote class="cyber-quote border-start border-3 ps-3 mb-3">
+                                “How do I protect my business without an enterprise budget or a
+                                computer science degree?”
+                            </blockquote>
+
+                            <ul class="list-unstyled small mb-0">
+                                <li><span class="text-warning fw-semibold">Reachable &amp; Human</span> when something goes wrong.</li>
+                                <li><span class="text-warning fw-semibold">Honest &amp; Transparent</span> about what you really need.</li>
+                                <li><span class="text-warning fw-semibold">Patient &amp; Clear</span> in every explanation we give.</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="glass-card image-card cyber-border overflow-hidden">
+                                <img src="~/images/our-story-aerial.jpg"
+                                     class="img-fluid"
+                                     alt="Aerial view of Southern California" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-values" class="page-wrapper-background cyber-section cyber-nodes cyber-hexes py-5">
+    <div class="container-xxl">
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8">
+                <div class="glass-panel text-center p-4 p-md-5">
+                    <p class="eyebrow text-uppercase text-cyber-accent fw-semibold mb-2">
+                        Our Values
+                    </p>
+                    <h2 class="display-5 fw-bold text-light mb-3">
+                        What You Can Count On When You Work With Us
+                    </h2>
+                    <p class="text-light-muted mb-0">
+                        Technology changes fast, but our commitment to how we serve you stays the same.
+                        Every recommendation, project, and support call is guided by these values.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="icon-pill mb-3">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h5 class="text-light mb-2">Clarity</h5>
+                    <p class="text-light-muted mb-0">
+                        We translate complex security concepts into plain English so you always
+                        understand what we’re doing, why, and which risks it addresses.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="icon-pill mb-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="text-light mb-2">Trust</h5>
+                    <p class="text-light-muted mb-0">
+                        We don’t sell fear. We’ll never recommend tools you don’t need or
+                        exaggerate threats just to close a deal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="icon-pill mb-3">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <h5 class="text-light mb-2">Local Care</h5>
+                    <p class="text-light-muted mb-0">
+                        We live and work where you do. As Orange County natives, we understand
+                        the pace and challenges of local businesses.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="glass-card h-100 p-4 d-flex flex-column">
+                    <div class="icon-pill mb-3">
+                        <i class="bi bi-check2-square"></i>
+                    </div>
+                    <h5 class="text-light mb-2">Accountability</h5>
+                    <p class="text-light-muted mb-0">
+                        We stand behind our work with clear response times, transparent
+                        reporting, and measurable results.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

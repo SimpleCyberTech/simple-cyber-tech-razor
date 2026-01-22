@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="font-roboto-regular bg-white">
+<body class="font-roboto-regular">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-dark px-3">
             <div class="container-fluid">
@@ -21,36 +21,26 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center fs-5 text-uppercase" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNavDropdown">
                     <ul class="navbar-nav pt-5 pt-xl-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Our Services
-                            </a>
-                            <ul class="dropdown-menu bg-sct-charcoal fs-5 px-3">
-                                <li><a class="dropdown-item text-sct-silver" href="/Services-Overview">Overview</a></li>
-                                <li><a class="dropdown-item text-sct-silver" href="/Services-Cybersecurity">Cybersecurity</a></li>
-                                <li><a class="dropdown-item text-sct-silver" href="/Services-Technology">IT/Help Desk Support</a></li>
-                            </ul>
-                        </li>
-                         <li class="nav-item">
                             <a class="nav-link" href="/About">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Services">Our Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Contact">Contact Us</a>
                         </li>
                         <li class="nav-item d-xl-none">
                             <a href="#">
-                                <button class="w-100 py-3 my-5" style="max-width: 500px;">Schedule a Call</button>
+                                <button class="w-100 py-3 my-5" style="max-width: 500px;">Book a Meeting</button>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <a href="#" class="d-none d-xl-block">
-                    <button class="fs-6 px-3 py-2">Schedule a Call</button>
+                    <button class="fs-6 px-3 py-2">Book a Meeting</button>
                 </a>
             </div>
         </nav>
@@ -64,8 +54,20 @@
     <footer class="footer">
         <div class="footer-top">
             <div class="container row justify-content-between mx-auto">
-                <div class="col-12 col-sm-auto pt-3">
-                    <h4 class="pb-3">Navigation</h4>
+                <div class="col-auto mb-3 order-lg-2">
+                    <h4 class="pb-3">Company Info</h4>
+                    <ul class="list-unstyled">
+                        <li>949 South Coast Drive, Suite 280</li>
+                        <li>Costa Mesa, CA 92626</li>
+                        <li><a href="tel:9495206805">(949) 520-6805</a></li>
+                        <li><a href="mailto:support@simplecybertech.com">support@simplecybertech.com</a></li>
+                        <br />
+                        <li>Mon-Fri: 9am - 6pm (PST)</li>
+                        <li>Sat-Sun: Closed</li>
+                    </ul>
+                </div>
+                <div class="col-auto mb-3 order-lg-3">
+                    <h4 class="pb-3">Quick Links</h4>
                     <ul class="list-unstyled">
                         <li><a href="/faq" class="">FAQ</a></li>
                         <li><a href="/services" class="">Services</a></li>
@@ -75,61 +77,47 @@
                         <li><a href="/terms" class="">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-sm-auto pt-3">
-                    <h4 class="pb-3">Social</h4>
-                    <ul class="list-unstyled">
-                        <li>
+                <div class="col-auto mx-auto mx-xl-0 order-lg-1">
+                    <div class="mb-4"><img src="/img/logo-company-name-horizontal-dark.png" alt="Simple Cyber Tech Logo" class="footer-logo img-fluid"/></div>
+                    <ul class="list-inline d-flex justify-content-between">
+                        <li class="list-inline-item">
                             <a href="#" class="text-decoration-none d-flex align-items-center">
-                                <img src="/img/social-linkedin-square.svg" alt="LinkedIn Icon" width="18" height="18" class="footer-social-icon me-2">
-                                LinkedIn
+                                <img src="/img/social-linkedin-square.svg" alt="LinkedIn Icon" width="35" height="35" class="footer-social-icon me-2">
                             </a>
                         </li>
-                        <li>
+                        <li class="list-inline-item">
                             <a href="#" class="text-decoration-none d-flex align-items-center">
-                                <img src="/img/social-twitter-square.svg" alt="Twitter/X Icon" width="18" height="18" class="footer-social-icon me-2" />
-                                Twitter/X
+                                <img src="/img/social-twitter-square.svg" alt="Twitter/X Icon" width="35" height="35" class="footer-social-icon me-2" />
                             </a>
                         </li>
-                        <li>
+                        <li class="list-inline-item">
                             <a href="#" class="text-decoration-none d-flex align-items-center">
-                                <img src="/img/social-facebook-square.svg" alt="Facebook Icon" width="18" height="18" class="footer-social-icon me-2" />
-                                Facebook
+                                <img src="/img/social-facebook-square.svg" alt="Facebook Icon" width="35" height="35" class="footer-social-icon me-2" />
                             </a>
                         </li>
-                        <li>
+                        <li class="list-inline-item">
                             <a href="#" class="text-decoration-none d-flex align-items-center">
-                                <img src="/img/social-instagram-square.svg" alt="Instagram Icon" width="18" height="18" class="footer-social-icon me-2" />
-                                Instagram
+                                <img src="/img/social-instagram-square.svg" alt="Instagram Icon" width="35" height="35" class="footer-social-icon me-2" />
                             </a>
                         </li>
-                        <li>
+                        <li class="list-inline-item">
                             <a href="#" class="text-decoration-none d-flex align-items-center">
-                                <img src="/img/social-youtube-square.svg" alt="YouTube Icon" width="18" height="18" class="footer-social-icon me-2" />
-                                YouTube
+                                <img src="/img/social-youtube-square.svg" alt="YouTube Icon" width="35" height="35" class="footer-social-icon me-2" />
                             </a>
                         </li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-auto pt-3">
-                    <div class="pb-3"><img src="/img/logo-company-name-horizontal-dark.png" alt="Simple Cyber Tech Logo" class="footer-logo img-fluid"/></div>
-                    <ul class="list-unstyled">
-                        <li>949 South Coast Drive, Suite 280</li>
-                        <li>Costa Mesa, CA 92626</li>
-                        <li><a href="tel:9495206805">(949) 520-6805</a></li>
-                        <li>Mon-Fri: 9am - 6pm PST</li>
-                        <li>Sat-Sun: Closed</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container text-center py-3">
-            &copy; 2026 - Simple Cyber Technology.  All rights reserved.</span>
+            Copyright &copy; 2026 - Simple Cyber Technology.  All rights reserved.</span>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/b110dd7c85.js" crossorigin="anonymous"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SimpleCyberTech.Pages;
 
-public class ServicesCybersecurityModel : PageModel
+public class ServicesModel : PageModel
 {
     public void OnGet()
     {

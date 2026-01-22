@@ -39,6 +39,9 @@ footer h4 {
 .footer-social-icon {
   background-color: var(--sct-beige);
 }
+@media (max-width: 360px) {
+  .footer-top { padding: 3rem 1rem; }
+}
 
 /* Media Queries */
 
@@ -49,22 +52,12 @@ footer h4 {
     width: 100%;
     max-width: 200px;
   }
-  .navbar {
-    text-align:center;
-  }
-
-  /* Footer Section */
-  .footer-top {
-    padding: 1rem;
-  }
-  .footer-logo {
-    width: 100%;
-    max-width: 250px;
-  }
+  .navbar { text-align:center; }
 }
 
 /* Size - Small (SM: 576-768) */
 @media (min-width: 576px) and (max-width: 767px) {
+  /* Header Section */
   .navbar { text-align:center; }
 }
 
