@@ -5,6 +5,9 @@ for details on configuring this project to bundle and minify static web assets. 
 header {
   background-color: var(--sct-espresso);
 }
+header .navbar {
+  background-color: var(--sct-espresso);
+}
 .navbar .container-fluid {
   padding: 0;
 }

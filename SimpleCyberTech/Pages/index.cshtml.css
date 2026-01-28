@@ -1,47 +1,5 @@
-/* Page Styles */
-.section-mt {
-    padding-top: 6rem;
-}
-
-/* Hero Section */
-#HeroSection {
-    max-height: 600px;
-}
-@media (max-width: 350px) {
-    #HeroSection h1 { font-size: 2.0rem; }
-}
-
-/* Parallax Styles */
+/* Parallax Background Image */
 .parallax-bg { background-image: url("/img/oc-it-solutions-with-secure-circle-and-shield-horizontal.jpg"); }
-
-.parallax-group {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
-    padding-bottom: 6rem;
-}
-
-/* Parallax Background Opacity */
-.parallax-group::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.50);
-    z-index: 0;
-}
-
-.parallax-group > section {
-    position: relative;
-    z-index: 1;
-}
-
-.parallax-group .container {
-    background: rgba(0, 0, 0, 0.25);
-    padding: 1rem;
-}
 
 /* Protect Your Business */
 #ProtectYourBusiness .card {
@@ -132,63 +90,21 @@
 
 /* Size - Extra Small (XS: <576) */
 @media (max-width: 575px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 600px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-
     /* Parallax Styles */
     .parallax-group { padding: 0 1rem 3rem; }
 }
 
 /* Size - Small (SM: 576-768) */
-@media (min-width: 576px) and (max-width: 767px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 650px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-}
+@media (min-width: 576px) and (max-width: 767px) {}
 
 /* Size - Medium (MD: 768-992) */
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 800px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-}
+@media (min-width: 768px) and (max-width: 991px) {}
 
 /* Size - Large (LG: 992-1200) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 600px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
 
 /* Size - Extra Large (XL: 1200-1400) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 600px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-}
+@media (min-width: 1200px) and (max-width: 1399px) {}
 
 /* Size - 2x Extra Large (XXL: >1400) */
-@media (min-width: 1400px) {
-    /* Page Styles */
-    .section-mt { padding-top: 3rem; }
-
-    /* Hero Section */
-    #HeroSection { max-height: 700px; }
-    .hero-jumbotron { padding: 0 1rem !important; }
-}
+@media (min-width: 1400px) {}

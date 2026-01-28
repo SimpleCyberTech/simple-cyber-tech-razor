@@ -64,7 +64,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   h2 {
     font-family: var(--font-header);
     font-size: 3.5rem;
@@ -74,7 +73,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   h3 {
     font-family: var(--font-subheader);
     font-size: 2.5rem;
@@ -84,7 +82,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   h4, h5, h6 {
     font-family: var(--font-subheader);
     font-weight: 600;
@@ -106,13 +103,14 @@ html {
 
 body {
   font-family: var(--font-regular);
+  font-size: 1.25rem;
   color: white;
+  background-color: var(--sct-espresso);
   min-height: 100vh;
 }
 
 p {
   font-family: var(--font-regular);
-  font-size: 1.5rem;
   color: white;
   margin-top: 0;
   margin-bottom: 0;
@@ -123,7 +121,6 @@ a {
   transition: color 0.3s ease;
   text-decoration: none;
 }
-
 a:hover {
   color: var(--sct-silver);
 }
@@ -142,9 +139,86 @@ button {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
-
 button:hover {
   background-color: var(--sct-maroon);
+}
+
+/* Hero Section */
+#HeroSection { max-height: 600px; }
+@media (max-width: 350px) {
+    #HeroSection h1 { font-size: 2.0rem; }
+}
+
+/* Parallax Background */
+.parallax-group {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    padding-bottom: 6rem;
+}
+.parallax-group::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.parallax-group > section {
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+}
+
+/* Glass Panel */
+.glass-panel {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(148, 163, 184, 0.25);
+    backdrop-filter: blur(15px) saturate(100%);
+    -webkit-backdrop-filter: blur(15px) saturate(100%);
+}
+.glass-panel::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+        rgba(0, 246, 255, 0.45),
+        rgba(236, 72, 153, 0.25),
+        transparent 60%);
+    opacity: 0.35;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(15, 23, 42, 0.75);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(148, 163, 184, 0.25);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    transition: all .22s ease-out;
+}
+.glass-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.95),
+        0 0 0 1.5px rgba(0, 246, 255, 0.55);
+}
+
+.glass-card p {
+    font-size: 1.25rem;
+    color: var(--sct-silver);
 }
 
 /* Size - Extra Small (XS: <576) */
@@ -159,6 +233,10 @@ button:hover {
     width: 100%;
     max-width: 200px;
   }
+
+  /* Hero Section */
+  #HeroSection { max-height: 600px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
 
   /* Footer Section */
   .footer-top {
@@ -176,6 +254,10 @@ button:hover {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.5rem; }
   h3 { font-size: 2rem; }
+
+  /* Hero Section */
+  #HeroSection { max-height: 650px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Medium (MD: 768-992) */
@@ -184,6 +266,10 @@ button:hover {
   h1 { font-size: 3.5rem; }
   h2 { font-size: 3rem; }
   h3 { font-size: 2.5rem; }
+  
+  /* Hero Section */
+  #HeroSection { max-height: 800px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Large (LG: 992-1200) */
@@ -192,6 +278,10 @@ button:hover {
   h1 { font-size: 3.5rem; }
   h2 { font-size: 3rem; }
   h3 { font-size: 2.5rem; }
+
+  /* Hero Section */
+  #HeroSection { max-height: 600px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Extra Large (XL: 1200-1400) */
@@ -200,7 +290,15 @@ button:hover {
   h1 { font-size: 4rem; }
   h2 { font-size: 3.5rem; }
   h3 { font-size: 2.5rem; }
+
+  /* Hero Section */
+  #HeroSection { max-height: 600px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - 2x Extra Large (XXL: >1400) */
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+  /* Hero Section */
+  #HeroSection { max-height: 700px; }
+  .hero-jumbotron { padding: 0 1rem !important; }
+}
