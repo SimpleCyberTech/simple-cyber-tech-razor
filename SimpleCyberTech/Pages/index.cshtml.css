@@ -84,27 +84,3 @@
     margin-bottom: 1rem;
     min-height: 2.5rem;
 }
-
-
-/* Media Queries */
-
-/* Size - Extra Small (XS: <576) */
-@media (max-width: 575px) {
-    /* Parallax Styles */
-    .parallax-group { padding: 0 1rem 3rem; }
-}
-
-/* Size - Small (SM: 576-768) */
-@media (min-width: 576px) and (max-width: 767px) {}
-
-/* Size - Medium (MD: 768-992) */
-@media (min-width: 768px) and (max-width: 991px) {}
-
-/* Size - Large (LG: 992-1200) */
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-/* Size - Extra Large (XL: 1200-1400) */
-@media (min-width: 1200px) and (max-width: 1399px) {}
-
-/* Size - 2x Extra Large (XXL: >1400) */
-@media (min-width: 1400px) {}

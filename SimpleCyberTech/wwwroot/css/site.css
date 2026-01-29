@@ -144,7 +144,45 @@ button:hover {
 }
 
 /* Hero Section */
-#HeroSection { max-height: 600px; }
+#HeroSection {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 600px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+#HeroSection video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+.video-overlay {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.hero-jumbotron {
+  position: relative;
+  padding: 0 1rem !important;
+  z-index: 3;
+}
+
 @media (max-width: 350px) {
     #HeroSection h1 { font-size: 2.0rem; }
 }
@@ -234,9 +272,8 @@ button:hover {
     max-width: 200px;
   }
 
-  /* Hero Section */
-  #HeroSection { max-height: 600px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
+  /* Parallax Styles */
+  .parallax-group { padding: 0 1rem 3rem; }
 
   /* Footer Section */
   .footer-top {
@@ -257,7 +294,6 @@ button:hover {
 
   /* Hero Section */
   #HeroSection { max-height: 650px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Medium (MD: 768-992) */
@@ -269,7 +305,6 @@ button:hover {
   
   /* Hero Section */
   #HeroSection { max-height: 800px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Large (LG: 992-1200) */
@@ -281,7 +316,6 @@ button:hover {
 
   /* Hero Section */
   #HeroSection { max-height: 600px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - Extra Large (XL: 1200-1400) */
@@ -293,12 +327,10 @@ button:hover {
 
   /* Hero Section */
   #HeroSection { max-height: 600px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
 }
 
 /* Size - 2x Extra Large (XXL: >1400) */
 @media (min-width: 1400px) {
   /* Hero Section */
   #HeroSection { max-height: 700px; }
-  .hero-jumbotron { padding: 0 1rem !important; }
 }

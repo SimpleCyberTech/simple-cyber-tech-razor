@@ -1,8 +1,3 @@
-/* Hero Section */
-.hero-overlay {
-    opacity: .6
-}
-
 /* Parallax Styles */
 .parallax-bg { background-image: url("/img/background_1.jpg"); }
 
@@ -13,23 +8,3 @@ iframe {
     border: none;
     margin: 0 auto;
 }
-
-/* Media Queries */
-
-/* Size - Extra Small (XS: <576) */
-@media (max-width: 575px) {}
-
-/* Size - Small (SM: 576-768) */
-@media (min-width: 576px) and (max-width: 767px) {}
-
-/* Size - Medium (MD: 768-992) */
-@media (min-width: 768px) and (max-width: 991px) {}
-
-/* Size - Large (LG: 992-1200) */
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-/* Size - Extra Large (XL: 1200-1400) */
-@media (min-width: 1200px) and (max-width: 1399px) {}
-
-/* Size - 2x Extra Large (XXL: >1400) */
-@media (min-width: 1400px) {}
