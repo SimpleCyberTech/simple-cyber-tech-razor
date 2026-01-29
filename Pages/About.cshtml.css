@@ -1,0 +1,51 @@
+/* Parallax Styles */
+.parallax-bg { background-image: url("/img/background_5.jpg"); }
+
+/* Our Story Section */
+#OurStory .card { background-color: transparent; }
+
+/* Our Values Section */
+.icon-pill {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: radial-gradient(
+        circle at 30% 0, 
+        rgba(255, 255, 255, 0.25),
+        transparent 60%),
+        rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    color: #00f6ff;
+    box-shadow: 0 0 18px rgba(0, 246, 255, 0.55);
+    font-size: 1.25rem;
+}
+
+/* How We Work Section */
+#HowWeWork .number-pills {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        circle at 30% 0, 
+        rgba(255, 255, 255, 0.25),
+        transparent 60%),
+        #5C0606;
+    border: 1px solid rgba(220, 38, 38, 0.7);
+    color: var(--sct-silver);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#HowWeWork .card { background: rgba(255, 255, 255, 0.20); }
+
+#HowWeWork .card-title {
+    color: white;
+    padding-bottom: .5rem;
+}

@@ -1,0 +1,53 @@
+/* Parallax Background Image */
+.parallax-bg { background-image: url("/img/background_4.jpg"); }
+
+/* Local Cybersecurity Section */
+#LocalCybersecurity h1,
+#LocalCybersecurity p { padding-bottom: 1rem; }
+
+#LocalCybersecurity .card {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+}
+
+#LocalCybersecurity .card img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#LocalCybersecurity .card-title {
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Help Desk Support Section */
+#HelpDeskSupport .card {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.20);
+    border-left-color: var(--sct-maroon);
+    border-left-width: 1rem;
+}
+
+#HelpDeskSupport .card-title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Managed Cybersecurity Section */
+#ManagedCybersecurity .card {
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#ManagedCybersecurity .card-title {
+    display: flex;
+    align-items: top;
+    color: var(--sct-beige);
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
