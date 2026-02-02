@@ -1,0 +1,38 @@
+.container {
+    max-width: 900px;
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--sct-blue);
+    padding-bottom: 15px;
+}
+
+.effective-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    background-color: var(--sct-maroon);
+    padding: 15px;
+    border-left: 4px solid var(--sct-blue);
+    margin: 20px 0;
+}

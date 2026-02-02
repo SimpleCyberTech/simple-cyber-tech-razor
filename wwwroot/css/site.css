@@ -91,9 +91,9 @@ body {
 
 p {
   font-family: var(--font-regular);
-  color: white;
+  color: white;;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 a {
