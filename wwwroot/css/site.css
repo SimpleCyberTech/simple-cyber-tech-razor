@@ -13,6 +13,29 @@
     --font-header: "Black Ops One", system-ui;
     --font-subheader: "Oswald", sans-serif;
     --font-regular: "Raleway", sans-serif;
+
+    /* Accessibility: Focus Outline */
+    --focus-outline: 3px solid var(--sct-blue);
+}
+
+/* Accessibility: Focus States for All Interactive Elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+/* Remove default outline for visual feedback through other means (border/box-shadow) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
 }
 
 /* Custom Brand Background Colors */
@@ -73,6 +96,23 @@ h4, h5, h6 {
 /* Global Styles */
 html {
   font-size: 14px;
+}
+
+/* Accessibility: Skip Link - Hide off-screen but keep focusable */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--sct-maroon);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 @media (min-width: 768px) {

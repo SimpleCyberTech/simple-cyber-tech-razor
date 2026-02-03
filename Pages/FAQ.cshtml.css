@@ -1,0 +1,118 @@
+/* FAQ Page Scoped Styles */
+
+.accordion-button {
+    color: var(--sct-charcoal);
+    font-weight: 500;
+    padding: 1.25rem;
+    border-bottom: 2px solid var(--sct-silver);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(122, 44, 37, 0.05);
+    color: var(--sct-charcoal);
+}
+
+.accordion-button:hover {
+    background-color: rgba(122, 44, 37, 0.02);
+}
+
+.accordion-button:focus {
+    border-color: var(--sct-maroon);
+    box-shadow: 0 0 0 0.25rem rgba(122, 44, 37, 0.25);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    color: var(--sct-charcoal);
+    line-height: 1.8;
+}
+
+.accordion-body p {
+    margin-bottom: 1rem;
+}
+
+.accordion-body ol,
+.accordion-body ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.accordion-body li {
+    margin-bottom: 0.75rem;
+}
+
+.accordion-body a {
+    color: var(--sct-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.accordion-body a:hover {
+    color: var(--sct-maroon);
+    text-decoration: underline;
+}
+
+.accordion-body table {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.accordion-body table thead {
+    background-color: rgba(122, 44, 37, 0.1);
+}
+
+.accordion-body table th {
+    color: var(--sct-charcoal);
+    font-weight: 600;
+}
+
+.accordion-body table td {
+    vertical-align: middle;
+    border-color: var(--sct-silver);
+}
+
+#HeroSection video {
+    object-fit: cover;
+}
+
+#HeroSection .video-overlay {
+    background: linear-gradient(135deg, rgba(122, 44, 37, 0.6) 0%, rgba(31, 63, 106, 0.6) 100%);
+}
+
+#HeroSection h1 {
+    color: white;
+    font-family: var(--font-header);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+#HeroSection h3 {
+    color: rgba(255, 255, 255, 0.95);
+    font-family: var(--font-regular);
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    #HeroSection h1 {
+        font-size: 2rem;
+    }
+
+    #HeroSection h3 {
+        font-size: 1rem;
+    }
+
+    .accordion-button {
+        padding: 1rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .accordion-body {
+        padding: 1.25rem;
+    }
+}

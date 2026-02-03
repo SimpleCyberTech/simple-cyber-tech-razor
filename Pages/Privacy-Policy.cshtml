@@ -1,7 +1,18 @@
 ﻿@page
 @model PrivacyModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
 @{
     ViewData["Title"] = "Privacy Policy";
+    ViewData["MetaDescription"] = "Simple Cyber Technology's privacy policy outlines how we collect, use, and protect your personal information and data.";
+}
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Privacy Policy", "/privacy-policy"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Privacy Policy - Simple Cyber Technology", "Learn how Simple Cyber Technology collects, uses, and protects your personal information and data. Our commitment to your privacy and security."))
+    </script>
 }
 
 <div class="container">

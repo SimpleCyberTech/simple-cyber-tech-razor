@@ -1,11 +1,29 @@
 @page
 @model AboutModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
+
 @{
     ViewData["Title"] = "About Us";
+    ViewData["MetaDescription"] = "Learn about Simple Cyber Technology, founded to make enterprise-grade cybersecurity accessible to Southern California's small and medium-sized businesses.";
+}
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("About Us", "/about-us"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetAboutPageSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetOrganizationSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("About Us - Simple Cyber Technology", "Learn about Simple Cyber Technology, your trusted cybersecurity and IT support partner for Southern California. Enterprise-grade security with clarity, honesty, and a human touch."))
+    </script>
 }
 
 <section id="HeroSection">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline aria-label="About us hero background video">
         <source src="/video/about-us-hero-section.mp4" type="video/mp4" />
     </video>
     <div class="video-overlay" aria-hidden="true" />
@@ -35,7 +53,7 @@
                     </p>
                 </div>
                 <div class="d-none d-xl-block col-xl-4 overflow-hidden">
-                    <img src="/img/metro-point-aerial.jpg" alt="Aerial view of Metro Point and South Coast Plaza" class="img-fluid h-100 object-fit-cover rounded" />
+                    <img src="/img/metro-point-aerial.jpg" alt="Aerial view of Metro Point and South Coast Plaza" class="img-fluid h-100 object-fit-cover rounded" loading="lazy" srcset="/img/metro-point-aerial.jpg 500w" sizes="(min-width: 1200px) 380px, 100vw" />
                 </div>
             </div>
         </div>
@@ -54,7 +72,7 @@
                         <span class="icon-pill mb-3">
                             <i class="fa-solid fa-book-journal-whills"></i>
                         </span>
-                        <h4 class="mb-2">Clarity</h4>
+                        <h3 class="mb-2">Clarity</h3>
                         <p>We translate complex security concepts into plain English so you always understand what we’re doing, why, and which risks it addresses.</p>
                     </div>
                 </div>
@@ -64,7 +82,7 @@
                         <div class="icon-pill mb-3">
                             <i class="fa-solid fa-user-shield"></i>
                         </div>
-                        <h4 class="mb-2">Trust</h4>
+                        <h3 class="mb-2">Trust</h3>
                         <p>We don’t sell fear. We’ll never recommend tools you don’t need or exaggerate threats just to close a deal.</p>
                         </p>
                     </div>
@@ -75,7 +93,7 @@
                         <div class="icon-pill mb-3">
                             <i class="fa-solid fa-map-location-dot"></i>
                         </div>
-                        <h4 class="mb-2">Local Care</h4>
+                        <h3 class="mb-2">Local Care</h3>
                         <p>We live and work where you do. As Orange County natives, we understand the pace and challenges of local businesses.</p>
                     </div>
                 </div>
@@ -85,7 +103,7 @@
                         <div class="icon-pill mb-3">
                             <i class="fa-solid fa-check-square"></i>
                         </div>
-                        <h4 class="mb-2">Accountability</h4>
+                        <h3 class="mb-2">Accountability</h3>
                         <p>We stand behind our work with clear response times, transparent reporting, and measurable results.</p>
                     </div>
                 </div>
@@ -105,7 +123,7 @@
                     </div>
                     <div class="col-12 col-sm-11 card">
                         <div class="card-body">
-                            <h4 class="card-title">Listen &amp; Understand</h4>
+                            <h3 class="card-title">Listen &amp; Understand</h3>
                             <p class="card-text">We start with a conversation—no scripts, no pressure. We learn how your business operates, what systems you rely on, and what keeps you up at night.</p>
                         </div>
                     </div>
@@ -116,7 +134,7 @@
                     </div>
                     <div class="col-12 col-sm-11 card">
                         <div class="card-body">
-                            <h4 class="card-title">Assess &amp; Prioritize</h4>
+                            <h3 class="card-title">Assess &amp; Prioritize</h3>
                             <p class="card-text">We review your current security posture and IT setup, identify real-world risks, and prioritize them based on impact and likelihood—not just headlines.</p>
                         </div>
                     </div>
@@ -127,7 +145,7 @@
                     </div>
                     <div class="col-12 col-sm-11 card">
                         <div class="card-body">
-                            <h4 class="card-title">Implement Practical Protections</h4>
+                            <h3 class="card-title">Implement Practical Protections</h3>
                             <p class="card-text">We design and deploy solutions that fit your size, budget, and compliance needs—backups, access controls, monitoring, user training, and more.</p>
                         </div>
                     </div>
@@ -138,7 +156,7 @@
                     </div>
                     <div class="col-12 col-sm-11 card">
                         <div class="card-body">
-                            <h4 class="card-title">Monitor, Support &amp; Improve</h4>
+                            <h3 class="card-title">Monitor, Support &amp; Improve</h3>
                             <p class="card-text">Cybersecurity isn't a one-time project. We continuously monitor, update, and fine-tune your protections while keeping you informed with human-friendly updates.</p>
                         </div>
                     </div>
@@ -156,14 +174,14 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-xl-4">
                     <div class="glass-card h-100 p-4">
-                        <h4 class="mb-2">Our Mission</h4>
+                        <h3 class="mb-2">Our Mission</h3>
                         <p class="mb-3">To provide Southern California small and mid-sized businesses with enterprise-grade cybersecurity and IT support delivered with clarity, honesty, and a human touch.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-xl-4">
                     <div class="glass-card h-100 p-4">
-                        <h4 class="mb-2">Our Vision</h4>
+                        <h3 class="mb-2">Our Vision</h3>
                         <p class="">A local business community where owners no longer fear technology or cyber threats, but instead use them confidently to grow and innovate.</p>
                         </p>
                     </div>

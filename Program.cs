@@ -1,7 +1,18 @@
+using simplecybertech.Services;
+using simplecybertech.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<ISchemaService, SchemaService>();
+
+// Bind Configuration Sections (BEFORE building app)
+builder.Services.Configure<SiteSettings>(builder.Configuration.GetSection("SiteSettings"));
+builder.Services.Configure<BusinessInfo>(builder.Configuration.GetSection("BusinessInfo"));
+builder.Services.Configure<NavigationSettings>(builder.Configuration.GetSection("Navigation"));
+builder.Services.Configure<List<ServiceInfo>>(builder.Configuration.GetSection("Services"));
+builder.Services.Configure<Dictionary<string, string>>(builder.Configuration.GetSection("SocialMedia"));
 
 var app = builder.Build();
 

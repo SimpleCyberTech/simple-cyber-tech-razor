@@ -1,0 +1,390 @@
+@page
+@model GlossaryModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
+
+@{
+    ViewData["Title"] = "Cybersecurity Glossary";
+    ViewData["MetaDescription"] = "Glossary of cybersecurity, IT security, and technology terms. Clear definitions for small business owners and decision-makers. Learn key security concepts from Simple Cyber Technology.";
+}
+
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Glossary", "/glossary"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Cybersecurity & IT Glossary", "A comprehensive glossary of cybersecurity, network security, and IT terms explained in plain language for small and medium-sized business owners."))
+    </script>
+}
+
+<section id="HeroSection">
+    <div class="glossary-hero">
+        <div class="container hero-jumbotron">
+            <h1 class="text-uppercase mb-3">Cybersecurity Glossary</h1>
+            <h3 class="fst-italic my-3">Plain-English explanations of cybersecurity and IT terms, so you can understand your security better.</h3>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <section id="GlossaryContent">
+        <div class="glass-panel p-3 p-md-5">
+            <p class="lead text-center mb-5">
+                Cybersecurity can be intimidating with all the technical jargon. This glossary explains key security and IT terms in plain English. 
+                Select a letter below to jump to terms starting with that letter.
+            </p>
+
+            <div class="glossary-navigation mb-5">
+                <div class="row g-2 justify-content-center">
+                    @foreach (var letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray())
+                    {
+                        <div class="col-auto">
+                            <a href="#letter-@letter" class="btn btn-sm btn-outline-primary">@letter</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- A -->
+            <div class="glossary-section" id="letter-A">
+                <h2 class="glossary-letter">A</h2>
+                
+                <div class="glossary-term">
+                    <h4>Advanced Threat Detection (ATD)</h4>
+                    <p>A security technology that goes beyond basic antivirus to identify sophisticated attacks. It uses behavioral analysis and machine learning to detect threats that look like normal activity but are actually malicious. Essential for catching zero-day exploits and advanced persistent threats (APTs).</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Antivirus Software</h4>
+                    <p>A program designed to prevent, detect, and remove malware (malicious software) from your computer. Traditional antivirus looks for known threats; modern antivirus also uses behavioral analysis to catch new threats. However, antivirus alone is not sufficient for comprehensive security.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Authentication</h4>
+                    <p>The process of verifying that someone is who they claim to be. In security, this typically involves passwords, but stronger authentication uses multiple factors: something you know (password), something you have (phone or security key), or something you are (fingerprint). Multi-factor authentication (MFA) is more secure than passwords alone.</p>
+                </div>
+            </div>
+
+            <!-- B -->
+            <div class="glossary-section" id="letter-B">
+                <h2 class="glossary-letter">B</h2>
+                
+                <div class="glossary-term">
+                    <h4>Backup</h4>
+                    <p>A copy of your data stored separately from the original. Regular backups are your insurance against data loss from ransomware, hardware failure, or accidents. Best practice: follow the 3-2-1 rule: 3 copies of data, 2 different storage types, 1 copy offsite. Backups should be tested regularly to ensure they can actually be restored.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Botnet</h4>
+                    <p>A network of compromised computers controlled by an attacker without the owners' knowledge. Each infected computer (a "bot") can be used to send spam, launch attacks, or steal data. Botnets often spread through malware or unpatched vulnerabilities.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Brute Force Attack</h4>
+                    <p>A hacking technique where an attacker tries many password combinations until they find the right one. Like trying every key on a keyring to open a lock. Defenses include: strong passwords, account lockouts after failed attempts, and rate limiting. This is why "Password123!" is worse than "correct-horse-battery-staple".</p>
+                </div>
+            </div>
+
+            <!-- C -->
+            <div class="glossary-section" id="letter-C">
+                <h2 class="glossary-letter">C</h2>
+                
+                <div class="glossary-term">
+                    <h4>Compliance</h4>
+                    <p>Following rules and regulations that apply to your industry. Examples: HIPAA (healthcare), PCI-DSS (payment cards), GDPR (EU privacy), SOC 2 (service providers). Compliance is not just about avoiding fines; it means implementing security controls that protect your business and your customers' data.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Cybersecurity</h4>
+                    <p>The practice of protecting computer systems, networks, and data from unauthorized access, theft, or damage. Cybersecurity includes technology (firewalls, encryption), processes (security policies), and people (training, awareness).</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Cyber Threat</h4>
+                    <p>Any potential danger to your digital assets: data, systems, networks, or reputation. Threats can be intentional (hackers, competitors) or accidental (employee mistakes, hardware failure). A threat is the potential for harm; a vulnerability is a weakness that could be exploited; and risk is the likelihood and impact of that happening.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Cybersecurity Insurance</h4>
+                    <p>Also called cyber liability insurance. Coverage for costs related to data breaches, ransomware attacks, business interruption, and legal liability. Insurance is NOT a substitute for security controls, but it helps recover from incidents. Most insurers require certain security measures before providing coverage.</p>
+                </div>
+            </div>
+
+            <!-- D -->
+            <div class="glossary-section" id="letter-D">
+                <h2 class="glossary-letter">D</h2>
+                
+                <div class="glossary-term">
+                    <h4>Data Breach</h4>
+                    <p>Unauthorized access to sensitive information, usually resulting in data theft or exposure. A breach may be discovered immediately or months later. Under regulations like GDPR and CCPA, you must notify affected parties within specific timeframes. Prevention is far cheaper than managing a breach.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>DDoS Attack (Distributed Denial of Service)</h4>
+                    <p>A cyberattack where multiple computers flood a website or service with requests, overwhelming it and making it unavailable to legitimate users. It's like thousands of people trying to enter a store at once, blocking the door. DDoS protection monitors traffic patterns and filters out malicious requests.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Disaster Recovery Plan (DRP)</h4>
+                    <p>A documented process for how your business will continue operating after a major incident: data breach, ransomware, natural disaster, or service failure. It includes backups, alternative systems, communication plans, and recovery time objectives (RTO). Every business should have one.</p>
+                </div>
+            </div>
+
+            <!-- E -->
+            <div class="glossary-section" id="letter-E">
+                <h2 class="glossary-letter">E</h2>
+                
+                <div class="glossary-term">
+                    <h4>Encryption</h4>
+                    <p>Scrambling data using mathematical algorithms so only authorized people with the encryption key can read it. Encryption protects data in transit (HTTPS on websites) and at rest (encrypted files). Even if a hacker steals encrypted data, they can't read it without the key.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Endpoint</h4>
+                    <p>Any device connected to your network: computers, laptops, phones, tablets, printers, IoT devices. Each endpoint is a potential security risk if not protected. Endpoint security includes antivirus, firewalls, encryption, and monitoring.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Endpoint Detection and Response (EDR)</h4>
+                    <p>Advanced security software installed on individual devices (endpoints) that continuously monitors for suspicious behavior and responds to threats. EDR goes beyond antivirus by using AI and behavioral analysis to catch sophisticated attacks. It's like a security team watching each computer 24/7.</p>
+                </div>
+            </div>
+
+            <!-- F -->
+            <div class="glossary-section" id="letter-F">
+                <h2 class="glossary-letter">F</h2>
+                
+                <div class="glossary-term">
+                    <h4>Firewall</h4>
+                    <p>A security barrier that monitors and controls network traffic coming in and out of your network. A firewall is like a border guard checking passports. It blocks unauthorized access while allowing legitimate traffic. Most businesses use both network firewalls (at the router) and personal firewalls (on each device).</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Firmware</h4>
+                    <p>Software that controls how hardware devices work. Examples: router firmware, printer firmware, device firmware. Firmware can have vulnerabilities, so it's critical to keep it updated. Many security breaches start with unpatched firmware.</p>
+                </div>
+            </div>
+
+            <!-- G -->
+            <div class="glossary-section" id="letter-G">
+                <h2 class="glossary-letter">G</h2>
+                
+                <div class="glossary-term">
+                    <h4>GDPR (General Data Protection Regulation)</h4>
+                    <p>European Union regulation that protects personal data of EU residents. Even if your business is in the US, GDPR applies if you handle EU customer data. Requirements include obtaining consent, data privacy, breach notification, and user rights. Non-compliance fines reach €20 million or 4% of annual revenue.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Hacker</h4>
+                    <p>Someone who gains unauthorized access to computer systems. Not all hackers are criminals: "white hat" hackers help find vulnerabilities; "black hat" hackers steal data or cause harm; "gray hat" hackers operate in gray areas. Cybersecurity professionals are ethical hackers who help organizations find and fix problems.</p>
+                </div>
+            </div>
+
+            <!-- H -->
+            <div class="glossary-section" id="letter-H">
+                <h2 class="glossary-letter">H</h2>
+                
+                <div class="glossary-term">
+                    <h4>HIPAA (Health Insurance Portability and Accountability Act)</h4>
+                    <p>US law protecting patient health information. If you work in healthcare, you must implement HIPAA-compliant security: access controls, encryption, audit logs, breach notification. Violations carry fines up to $50,000 per incident.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>HTTPS</h4>
+                    <p>Secure version of HTTP (web protocol) that encrypts data between your browser and a website. Look for the padlock icon in your browser. HTTPS uses SSL/TLS encryption, so eavesdroppers can't see your passwords or personal information. Any website handling sensitive data should use HTTPS.</p>
+                </div>
+            </div>
+
+            <!-- I -->
+            <div class="glossary-section" id="letter-I">
+                <h2 class="glossary-letter">I</h2>
+                
+                <div class="glossary-term">
+                    <h4>Identity and Access Management (IAM)</h4>
+                    <p>Systems and policies that control who can access what resources. IAM answers: Who is this person? What are they allowed to do? Are they still supposed to have access? Includes user provisioning, password management, multi-factor authentication, and access reviews.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Incident Response</h4>
+                    <p>Your plan for responding to a security breach or cyberattack. Includes: detection, containment, investigation, eradication, and recovery. Fast incident response minimizes damage and cost. Every organization should have an incident response plan and practice it regularly.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>IoT (Internet of Things)</h4>
+                    <p>Connected devices beyond traditional computers: smart devices, cameras, sensors, industrial equipment. IoT devices can be convenient but are often security weaknesses. Many lack strong passwords, don't receive security updates, and collect personal data. Secure your IoT devices with network segmentation and monitoring.</p>
+                </div>
+            </div>
+
+            <!-- M -->
+            <div class="glossary-section" id="letter-M">
+                <h2 class="glossary-letter">M</h2>
+                
+                <div class="glossary-term">
+                    <h4>Malware</h4>
+                    <p>Malicious software designed to harm your computer or steal data. Types include viruses (replicate by infecting files), worms (spread across networks), trojans (disguise as legitimate programs), spyware (steal information), and ransomware (encrypt and extort). Prevention: antivirus, patches, user training.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Multi-Factor Authentication (MFA)</h4>
+                    <p>Security that requires multiple forms of proof of identity. Examples: password (something you know) + phone approval (something you have). Even if someone steals your password, they can't access your account without your phone. MFA dramatically reduces the risk of account takeover.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Managed Security Services Provider (MSSP)</h4>
+                    <p>A third-party company that manages your security for you: monitoring networks, managing firewalls, responding to incidents, updating patches. MSSPs allow small businesses to access enterprise-grade security without hiring a large IT team.</p>
+                </div>
+            </div>
+
+            <!-- N -->
+            <div class="glossary-section" id="letter-N">
+                <h2 class="glossary-letter">N</h2>
+                
+                <div class="glossary-term">
+                    <h4>Network Segmentation</h4>
+                    <p>Dividing your network into smaller sections (segments or subnets) and controlling traffic between them. Think of it as doors in a building: if one area is breached, the attacker doesn't have access to the entire network. Segments might include: admin network, employee network, guest network, production systems.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>NIST Cybersecurity Framework</h4>
+                    <p>A set of guidelines from the US National Institute of Standards and Technology for managing cybersecurity. NIST provides best practices organized into five functions: Identify, Protect, Detect, Respond, and Recover. Used by government agencies and increasingly by businesses.</p>
+                </div>
+            </div>
+
+            <!-- P -->
+            <div class="glossary-section" id="letter-P">
+                <h2 class="glossary-letter">P</h2>
+                
+                <div class="glossary-term">
+                    <h4>PCI-DSS (Payment Card Industry Data Security Standard)</h4>
+                    <p>Standard for businesses that accept credit card payments. If you handle card data, you must comply with PCI-DSS: encryption, access controls, regular security testing, incident response. Non-compliance results in fines and card processing bans.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Penetration Testing (Pen Testing)</h4>
+                    <p>Authorized security testing where experts simulate real attacks to find vulnerabilities before hackers do. Includes trying to break into networks, exploit software, and compromise systems. Results in a detailed report of findings and recommendations. Annual penetration testing is a best practice.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Phishing</h4>
+                    <p>Email or message that tricks you into revealing sensitive information or clicking a malicious link. Example: fake "confirm your password" email. Phishing is the leading cause of data breaches. Defense: user training, email filtering, multi-factor authentication. When in doubt, verify with a phone call.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Patch Management</h4>
+                    <p>Process of updating software to fix security vulnerabilities and bugs. Patches are released regularly for operating systems, applications, and firmware. Unpatched systems are vulnerable. Strategy: automate patching where possible, test before deploying, keep an inventory of what's installed.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Public Key Infrastructure (PKI)</h4>
+                    <p>System for encrypting data and verifying identity using pairs of keys: a public key (shared) and a private key (secret). Used for HTTPS, email encryption, and digital signatures. PKI ensures that data stays confidential and messages are authentic.</p>
+                </div>
+            </div>
+
+            <!-- R -->
+            <div class="glossary-section" id="letter-R">
+                <h2 class="glossary-letter">R</h2>
+                
+                <div class="glossary-term">
+                    <h4>Ransomware</h4>
+                    <p>Malware that encrypts your files and demands payment (ransom) to decrypt them. Ransomware spreads through phishing, unpatched vulnerabilities, or compromised credentials. Defense: regular backups (offline), patch management, email security, user training. If infected, consult with cybersecurity experts—paying ransoms funds criminals and doesn't guarantee file recovery.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Risk Assessment</h4>
+                    <p>Process of identifying potential threats to your business and evaluating their likelihood and impact. Risk = Threat × Vulnerability × Impact. Assessment helps prioritize what security measures matter most. Should be done annually and after major changes.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Risk Management</h4>
+                    <p>Strategy for dealing with identified risks: avoid (don't do risky things), mitigate (reduce risk), transfer (buy insurance), or accept (acknowledge and live with it). Not every risk can be eliminated; the goal is to manage risk to acceptable levels.</p>
+                </div>
+            </div>
+
+            <!-- S -->
+            <div class="glossary-section" id="letter-S">
+                <h2 class="glossary-letter">S</h2>
+                
+                <div class="glossary-term">
+                    <h4>Security Awareness Training</h4>
+                    <p>Education for employees about security risks and best practices. Topics: password security, phishing recognition, data handling, incident reporting. Regular training (at least annually, ideally quarterly) significantly reduces the risk of human error leading to breaches. Employees are your first line of defense.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>SOC 2 Compliance</h4>
+                    <p>Security certification for service providers (cloud, SaaS, hosting companies). SOC 2 assesses controls in five areas: security, availability, processing integrity, confidentiality, and privacy. If your vendors handle sensitive data, ask for their SOC 2 certification.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Social Engineering</h4>
+                    <p>Manipulation of people to bypass security controls. Attacker might pretend to be IT support and ask for your password. Social engineering exploits human psychology rather than technical vulnerabilities. Defense: verify identities, follow security policies, trust your instincts, report suspicious requests.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>SSL/TLS</h4>
+                    <p>Encryption protocols that secure data in transit over the internet. SSL (Secure Sockets Layer) is older; TLS (Transport Layer Security) is the modern standard. They establish encrypted connections (HTTPS websites). Every business website should use TLS.</p>
+                </div>
+            </div>
+
+            <!-- T -->
+            <div class="glossary-section" id="letter-T">
+                <h2 class="glossary-letter">T</h2>
+                
+                <div class="glossary-term">
+                    <h4>Threat</h4>
+                    <p>Any potential danger to your systems or data. Threats can be external (hackers, malware) or internal (disgruntled employees, accidental deletion). A threat only becomes a problem if there's a vulnerability to exploit.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Threat Intelligence</h4>
+                    <p>Information about current and emerging cyber threats, attack methods, and threat actors. Businesses use threat intelligence to understand what attacks might target them and how to defend against them. Intelligence includes indicators of compromise (IOCs), attack patterns, and attacker information.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Two-Factor Authentication (2FA)</h4>
+                    <p>A type of multi-factor authentication requiring two forms of identity verification. Examples: password + phone code, email + security key. Significantly more secure than passwords alone.</p>
+                </div>
+            </div>
+
+            <!-- V -->
+            <div class="glossary-section" id="letter-V">
+                <h2 class="glossary-letter">V</h2>
+                
+                <div class="glossary-term">
+                    <h4>Vulnerability</h4>
+                    <p>A weakness in your systems that could be exploited by an attacker. Examples: unpatched software, weak passwords, misconfigured systems, lack of encryption. Vulnerabilities are found through security testing; fixing them is part of your security strategy.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Vulnerability Scan</h4>
+                    <p>Automated scan of your systems to identify known vulnerabilities. Vulnerability scans use vulnerability databases (CVE—Common Vulnerabilities and Exposures) to find unpatched software, weak configurations, and other issues. Regular scanning (monthly or quarterly) helps you stay ahead of attackers.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Vulnerability Assessment</h4>
+                    <p>More detailed than a scan, a vulnerability assessment uses both automated and manual testing to identify weaknesses, prioritize them, and recommend fixes. Unlike penetration testing, assessments don't exploit vulnerabilities—they just identify them.</p>
+                </div>
+            </div>
+
+            <!-- Z -->
+            <div class="glossary-section" id="letter-Z">
+                <h2 class="glossary-letter">Z</h2>
+                
+                <div class="glossary-term">
+                    <h4>Zero-Day Exploit</h4>
+                    <p>An attack that exploits a previously unknown vulnerability (one that developers haven't had time to patch). "Zero-day" means attackers had zero days to prepare a fix. Zero-day exploits are rare, sophisticated, and dangerous. Defenses include: keep systems up-to-date, use behavior-based detection, limit user privileges.</p>
+                </div>
+
+                <div class="glossary-term">
+                    <h4>Zero Trust Security</h4>
+                    <p>Security approach that assumes no user or system is inherently trustworthy, even if they're inside your network. Verify every access request: authentication, device health, data sensitivity. Zero trust requires continuous verification rather than one-time login. It's becoming the industry standard.</p>
+                </div>
+            </div>
+
+            <div class="mt-5 p-4" style="background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3>Still Need Clarification?</h3>
+                <p>Don't see a term you're looking for? Want to discuss how these concepts apply to your business? Our team can explain cybersecurity in a way that makes sense to you.</p>
+                <a href="/contact-us" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,10 +1,29 @@
 @page
 @model ContactModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
+
 @{
     ViewData["Title"] = "Contact Us";
+    ViewData["MetaDescription"] = "Get in touch with Simple Cyber Technology in Costa Mesa, CA. Schedule a security review or call (949) 520-6805 for immediate cybersecurity assistance.";
 }
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Contact Us", "/contact-us"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetContactPageSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetLocalBusinessSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Contact Us - Simple Cyber Technology", "Get in touch with our Southern California-based cybersecurity team. Schedule a security review or call us at (949) 520-6805 for immediate assistance."))
+    </script>
+}
+
 <section id="HeroSection">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline aria-label="Contact us hero background video">
         <source src="/video/contact-us-hero-section.mp4" type="video/mp4" />
     </video>
     <div class="video-overlay" aria-hidden="true" />

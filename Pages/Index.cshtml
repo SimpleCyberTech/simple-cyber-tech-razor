@@ -1,11 +1,23 @@
 ﻿@page
 @model IndexModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
+
 @{
     ViewData["Title"] = "Home";
+    ViewData["MetaDescription"] = "Enterprise-grade cybersecurity, IT services and help desk support for Southern California small and medium-sized businesses. Simplified security you can trust.";
+}
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Home", "/"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Simple Cyber Technology - Cybersecurity Services for Southern California", "Enterprise-grade cybersecurity, IT Services and Help Desk Support delivered with clarity, honesty, and a human touch. We protect your business, so you can focus on growth."))
+    </script>
 }
 
 <section id="HeroSection">
-    <video autoPlay loop muted playsInline>
+    <video autoPlay loop muted playsInline aria-label="Cybersecurity hero background video">
         <source src="/video/homepage-hero-section.mp4" type="video/mp4" />
     </video>
     <div class="container hero-jumbotron">
@@ -24,7 +36,7 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="d-none d-xl-block col-xl-3 overflow-hidden">
-                        <img src="/img/costa-mesa-building-large.jpg" alt="Protect your business" class="img-fluid h-100 object-fit-cover rounded" />
+                        <img src="/img/costa-mesa-building-large.jpg" alt="Protect your business" class="img-fluid h-100 object-fit-cover rounded" loading="lazy" srcset="/img/costa-mesa-building-large.jpg 1200w" sizes="(min-width: 1200px) 300px, 100vw" />
                     </div>
                     <div class="col-xl-9 ps-xl-4">
                         <div class="card-body py-xl-0">
@@ -47,10 +59,10 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/man-in-suit-holding-cyber-security-shield.jpg" alt="A man in a buisness suit holding a digital shield representing cybersecurity.">
+                            <img src="/img/man-in-suit-holding-cyber-security-shield.jpg" alt="Professional holding a digital shield representing cybersecurity protection." loading="lazy" srcset="/img/man-in-suit-holding-cyber-security-shield.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Managed Cybersecurity</h4>
+                            <h3 class="card-title">Managed Cybersecurity</h3>
                             <p class="card-text">Our always-on protection services safeguard your business from the ever-evolving threat landscape. We implement robust security measures, monitor your systems 24/7, and respond rapidly to potential threats.</p>
                         </div>
                     </div>
@@ -58,10 +70,10 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/man-and-woman-reviewing-on-a-monitor.jpg" alt="A man and woman in professional clothing are looking at a computer monitor on a desk as if they are reviewing something.">
+                            <img src="/img/man-and-woman-reviewing-on-a-monitor.jpg" alt="IT professionals reviewing security data on a computer monitor." loading="lazy" srcset="/img/man-and-woman-reviewing-on-a-monitor.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Help Desk</h4>
+                            <h3 class="card-title">Help Desk</h3>
                             <p class="card-text">Get immediate assistance from real humans who understand your business needs. We provide fast, friendly IT support for everything from email issues to software glitches, ensuring your operations run smoothly.</p>
                         </div>
                     </div>
@@ -69,16 +81,16 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/security-lab-with-man-reviewing-monitors.jpg" alt="A man in a buisness suit holding a digital shield representing cybersecurity.">
+                            <img src="/img/security-lab-with-man-reviewing-monitors.jpg" alt="Security operations professional monitoring network activity and threat detection systems." loading="lazy" srcset="/img/security-lab-with-man-reviewing-monitors.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Penetration Testing</h4>
+                            <h3 class="card-title">Penetration Testing</h3>
                             <p class="card-text">Our ethical hackers think like the bad guys, but work for you. We find security gaps before attackers do, giving you actionable insights to strengthen your defenses and protect your valuable business data.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>Each of our services is delivered with the same commitment to clarity and effectiveness. We don't just implement technical solutions; we ensure you understand how they protect your business and contribute to your success.</p>
+            <p>Each of our services is delivered with the same commitment to clarity and effectiveness. We don't just implement technical solutions; we ensure you understand how they protect your business and contribute to your success. Learn more about our <a href="/services-overview">comprehensive service offerings</a> or <a href="/about-us">discover our approach</a> to cybersecurity.</p>
         </div>
     </section>
 
@@ -90,10 +102,10 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/oc-local-map.jpg" alt="Aerial view map of Orange County, California highlighting local businesses.">
+                            <img src="/img/oc-local-map.jpg" alt="Aerial view map of Orange County, California highlighting local businesses." loading="lazy" srcset="/img/oc-local-map.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Local</h4>
+                            <h3 class="card-title">Local</h3>
                             <p class="card-text">Rooted in Orange County, we understand the distinct needs of businesses in Southern California.</p>
                         </div>
                     </div>
@@ -101,27 +113,27 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/office-working-looking-in-distance.jpg" alt="A man and woman in professional clothing are looking at a computer monitor on a desk as if they are reviewing something.">
+                            <img src="/img/office-working-looking-in-distance.jpg" alt="Professional woman in office setting looking thoughtfully into the distance." loading="lazy" srcset="/img/office-working-looking-in-distance.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">No Cyberspeak</h4>
-                            <p class="card-text">A woman dressed in professional clothing looking thoughtfully into the distance in an office setting.</p>
+                            <h3 class="card-title">No Cyberspeak</h3>
+                            <p class="card-text">We speak your language, not technical jargon. Clear communication is at the heart of everything we do.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <div class="overflow-hidden">
-                            <img src="/img/cyber-team-looking-at-monitors.jpg" alt="Two men in business casual clothes in an office setting looking at multiple computer monitors displaying security data.">
+                            <img src="/img/cyber-team-looking-at-monitors.jpg" alt="Cybersecurity team monitoring security operations on multiple computer screens." loading="lazy" srcset="/img/cyber-team-looking-at-monitors.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Fast Response</h4>
+                            <h3 class="card-title">Fast Response</h3>
                             <p class="card-text">When security threats happen, our team acts swiftly to contain risks and keep your business running smoothly.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>We are more than a cybersecurity vendor. We're your local digital guardians, protecting Southern California businesses with no-nonsense security solutions, even if you’re not a tech expert.</p>
+            <p>We are more than a cybersecurity vendor. We're your local digital guardians, protecting Southern California businesses with no-nonsense security solutions, even if you're not a tech expert. <a href="/about-us">Learn about our story and values</a> or <a href="/contact-us">schedule a free security review</a> today.</p>
         </div>
     </section>
 </div>

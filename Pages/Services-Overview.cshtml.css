@@ -51,3 +51,214 @@
     margin-bottom: 1rem;
     min-height: 2.5rem;
 }
+/* Penetration Testing Section */
+#PenetrationTesting {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#PenetrationTesting h2 {
+    color: var(--sct-maroon);
+    margin-bottom: 1.5rem;
+}
+
+#PenetrationTesting h3 {
+    color: var(--sct-blue);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-step {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--sct-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.service-step:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: var(--sct-maroon);
+    transform: translateY(-5px);
+}
+
+.service-step .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--sct-maroon);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.service-step h4 {
+    color: var(--sct-blue);
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.service-step p {
+    color: var(--text-light, #f0f0f0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Service Comparison Section */
+#ServiceComparison {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#ServiceComparison h2 {
+    color: var(--sct-maroon);
+    margin-bottom: 2rem;
+}
+
+.table {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light, #f0f0f0);
+    border: 1px solid var(--sct-blue);
+}
+
+.table thead {
+    background: rgba(131, 45, 62, 0.3);
+    border-bottom: 2px solid var(--sct-maroon);
+}
+
+.table thead th {
+    color: var(--sct-beige);
+    font-weight: bold;
+    border-color: var(--sct-maroon);
+}
+
+.table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.table tbody td {
+    color: var(--text-light, #f0f0f0);
+    vertical-align: middle;
+}
+
+/* Common Questions Section */
+#CommonQuestions {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#CommonQuestions h2 {
+    color: var(--sct-maroon);
+    margin-bottom: 2rem;
+}
+
+.accordion-button {
+    background-color: rgba(131, 45, 62, 0.2);
+    color: var(--sct-beige);
+    border: 1px solid var(--sct-blue);
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(131, 45, 62, 0.4);
+    color: var(--sct-beige);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: var(--sct-maroon);
+    box-shadow: 0 0 0 0.25rem rgba(131, 45, 62, 0.25);
+}
+
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-light, #f0f0f0);
+    border-top: 1px solid var(--sct-blue);
+}
+
+.accordion-body ol,
+.accordion-body ul {
+    margin-bottom: 1rem;
+}
+
+.accordion-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.accordion-body strong {
+    color: var(--sct-beige);
+}
+
+/* Get Started Section */
+#GetStarted {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#GetStarted h2 {
+    color: var(--sct-maroon);
+}
+
+#GetStarted .lead {
+    color: var(--text-light, #f0f0f0);
+    font-size: 1.1rem;
+}
+
+#GetStarted .btn-primary {
+    background-color: var(--sct-maroon);
+    border-color: var(--sct-maroon);
+    transition: all 0.3s ease;
+}
+
+#GetStarted .btn-primary:hover {
+    background-color: var(--sct-blue);
+    border-color: var(--sct-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#GetStarted .btn-outline-primary {
+    color: var(--sct-beige);
+    border-color: var(--sct-blue);
+    transition: all 0.3s ease;
+}
+
+#GetStarted .btn-outline-primary:hover {
+    background-color: var(--sct-blue);
+    border-color: var(--sct-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-step {
+        margin-bottom: 1rem;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    #GetStarted .d-flex {
+        gap: 1rem !important;
+    }
+
+    #GetStarted .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}

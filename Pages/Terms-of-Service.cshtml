@@ -1,7 +1,18 @@
 @page
 @model PrivacyModel
+@using simplecybertech.Services;
+@inject ISchemaService SchemaService;
 @{
     ViewData["Title"] = "Terms of Service";
+    ViewData["MetaDescription"] = "Read the Terms of Service for Simple Cyber Technology's cybersecurity, managed IT, and help desk support services in Southern California.";
+}
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Terms of Service", "/terms-of-service"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Terms of Service - Simple Cyber Technology", "Read the Terms of Service for Simple Cyber Technology's cybersecurity, managed IT, help desk support, and IT security services in Southern California."))
+    </script>
 }
 
 <div class="container">
