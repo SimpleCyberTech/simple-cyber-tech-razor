@@ -1,86 +1,82 @@
+/* Hero Section */
+#HeroSection { max-height: 750px; }
+
 /* Parallax Background Image */
 .parallax-bg { background-image: url("/img/oc-it-solutions-with-secure-circle-and-shield-horizontal.jpg"); }
 
 /* Protect Your Business */
 #ProtectYourBusiness .card { background-color: transparent; }
 
-@media (max-width: 1199px) { 
-    #ProtectYourBusiness .card-body {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-}
-
-/* Three Pillars Section */
+/* Three Pillars & Local Cybersecurity Sections */
 #ThreePillars h1,
-#ThreePillars p { padding-bottom: 1rem; }
-
-#ThreePillars .card {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: transparent;
-}
-
-#ThreePillars .card img {
-    width: 100%;
-    max-width: 250px;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#ThreePillars .card-title {
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-/* Local Cybersecurity Section */
 #LocalCybersecurity h1,
-#LocalCybersecurity p { padding-bottom: 1rem; }
+#ThreePillars p,
+#LocalCybersecurity p  { padding-bottom: 1rem; }
 
+#ThreePillars .row > [class*='col-'],
+#LocalCybersecurity .row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+#ThreePillars .card,
 #LocalCybersecurity .card {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+#ThreePillars .overflow-hidden,
+#LocalCybersecurity .overflow-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    min-height: 250px;
+}
+
+#ThreePillars .card img,
 #LocalCybersecurity .card img {
     width: 100%;
     max-width: 250px;
-    height: 100%;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
 
+#ThreePillars .card-body,
+#LocalCybersecurity .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#ThreePillars .card-title,
 #LocalCybersecurity .card-title {
     color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-/* Help Desk Support Section */
-#HelpDeskSupport .card {
-    margin-top: 1rem;
-    background: rgba(255, 255, 255, 0.20);
-    border-left-color: var(--sct-maroon);
-    border-left-width: 1rem;
-}
-
-#HelpDeskSupport .card-title {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-/* Managed Cybersecurity Section */
-#ManagedCybersecurity .card {
-    margin-top: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#ManagedCybersecurity .card-title {
+    height: 5rem;
+    min-height: 5rem;
+    max-height: 5rem;
     display: flex;
-    align-items: top;
-    color: var(--sct-beige);
-    margin-bottom: 1rem;
-    min-height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem
 }
+
+#ThreePillars .card-text,
+#LocalCybersecurity .card-text {
+    flex-grow: 1;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Hero Section */
+@media (min-width: 460px) { #HeroSection { max-height: 650px; }}
+@media (min-width: 500px) { #HeroSection { max-height: 600px; }}
+@media (min-width: 576px) { #HeroSection { max-height: 550px; }}
+@media (min-width: 992px) { #HeroSection { max-height: 650px; }}
+@media (min-width: 1200px) { #HeroSection { max-height: 550px; }}

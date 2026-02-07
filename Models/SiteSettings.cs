@@ -63,4 +63,18 @@ namespace simplecybertech.Models
         public required string PrivacyPolicyPage { get; set; }
         public required string TermsOfServicePage { get; set; }
     }
+
+    public class FAQItem
+    {
+        public required int Id { get; set; }
+        public required string Question { get; set; }
+        public required string Answer { get; set; }
+    }
+
+    public class GlossaryTerm
+    {
+        public required string Term { get; set; }
+        public required string Definition { get; set; }
+        public required char Letter { get; set; }
+    }
 }

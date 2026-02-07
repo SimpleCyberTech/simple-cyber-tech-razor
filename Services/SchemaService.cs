@@ -18,6 +18,7 @@ namespace simplecybertech.Services
         string GetServicesCollectionSchema();
         string GetLocalBusinessSchema();
         string GetLocationSpecificSchema(string cityName, string citySlug);
+        string GetGlossarySchema(List<GlossaryTerm> terms);
     }
 
     public class SchemaService : ISchemaService
@@ -354,6 +355,32 @@ namespace simplecybertech.Services
                 })
             };
             return JsonSerializer.Serialize(localBusinessSchema);
+        }
+
+        public string GetGlossarySchema(List<GlossaryTerm> terms)
+        {
+            var glossarySchema = new
+            {
+                @context = "https://schema.org",
+                @type = "DefinedTermSet",
+                name = "Cybersecurity & IT Security Glossary",
+                description = "A comprehensive glossary of cybersecurity, network security, and IT terms explained in plain language for small and medium-sized business owners.",
+                inDefinedTermSet = $"{_site.BaseUrl}/glossary",
+                publisher = new
+                {
+                    @type = "Organization",
+                    name = _business.LegalName,
+                    url = _site.BaseUrl
+                },
+                hasDefinedTerm = terms.Select(term => new
+                {
+                    @type = "DefinedTerm",
+                    name = term.Term,
+                    description = term.Definition,
+                    identifier = $"{_site.BaseUrl}/glossary#term-{term.Term.Replace(" ", "-").ToLower()}"
+                }).ToArray()
+            };
+            return JsonSerializer.Serialize(glossarySchema);
         }
     }
 }

@@ -7,20 +7,6 @@
     ViewData["Title"] = "Contact Us";
     ViewData["MetaDescription"] = "Get in touch with Simple Cyber Technology in Costa Mesa, CA. Schedule a security review or call (949) 520-6805 for immediate cybersecurity assistance.";
 }
-@section PageSchema {
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetBreadcrumbSchema("Contact Us", "/contact-us"))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetContactPageSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetLocalBusinessSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetWebPageSchema("Contact Us - Simple Cyber Technology", "Get in touch with our Southern California-based cybersecurity team. Schedule a security review or call us at (949) 520-6805 for immediate assistance."))
-    </script>
-}
 
 <section id="HeroSection">
     <video autoplay muted loop playsinline aria-label="Contact us hero background video">
@@ -33,7 +19,7 @@
     </div>
 </section>
 
-<div class="parallax-group parallax-bg">
+<div id="MainContent" class="parallax-group parallax-bg">
     <section id="ContactSection" class="container">
         <div class="glass-panel text-center p-3 p-md-5 my-5">
             <h2>Get In Touch With Us</h2>
@@ -54,3 +40,19 @@
 
 <!-- Javascript for Msgsndr form embed -->
 <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+
+<!-- Page Schema section -->
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Contact Us", "/contact-us"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetContactPageSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetLocalBusinessSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Contact Us - Simple Cyber Technology", "Get in touch with our Southern California-based cybersecurity team. Schedule a security review or call us at (949) 520-6805 for immediate assistance."))
+    </script>
+}

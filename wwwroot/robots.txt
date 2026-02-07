@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api
 
-Sitemap: https://www.simplecybertech.com/sitemap.xml
+Sitemap: https://simplecybertech.com/sitemap.xml

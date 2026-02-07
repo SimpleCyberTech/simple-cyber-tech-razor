@@ -24,6 +24,11 @@
     font-size: 1.25rem;
 }
 
+.icon-pill img {
+    width: 50%;
+    height: 50%;
+    color: #00f6ff;
+}
 /* How We Work Section */
 #HowWeWork .number-pills {
     width: 50px;

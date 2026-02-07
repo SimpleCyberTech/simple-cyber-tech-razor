@@ -7,29 +7,6 @@
     ViewData["Title"] = "Services Overview";
     ViewData["MetaDescription"] = "Comprehensive cybersecurity, managed IT, help desk support, and penetration testing services designed for Orange County small and medium-sized businesses.";
 }
-@section PageSchema {
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetBreadcrumbSchema("Services Overview", "/services-overview"))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetServicesCollectionSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetLocalBusinessSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Help Desk Support", Description = "Friendly, fast IT support for businesses in Southern California. Real people answering your technical questions with clear solutions that keep your team productive.", Category = "Technical Support", Url = "/services-overview#HelpDeskSupport" }))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Managed Cybersecurity", Description = "24/7 monitoring, threat detection, and rapid incident response for comprehensive protection of your business. Proactive security measures tailored to your organization's specific needs.", Category = "Cybersecurity", Url = "/services-overview#ManagedCybersecurity" }))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Penetration Testing", Description = "Ethical hacking to identify security vulnerabilities before attackers do. Comprehensive testing and actionable recommendations to strengthen your security posture.", Category = "Security Testing", Url = "/services-overview#PenetrationTesting" }))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetWebPageSchema("Services Overview - Simple Cyber Technology", "Explore our comprehensive cybersecurity, managed IT, help desk support, and penetration testing services designed for Southern California small and medium-sized businesses."))
-    </script>
-}
 
 <section id="HeroSection">
     <video autoPlay loop muted playsInline aria-label="Services overview hero background video">
@@ -42,7 +19,7 @@
     </div>
 </section>
 
-<div class="parallax-group parallax-bg">
+<div id="MainContent" class="parallax-group parallax-bg">
     <section id="HelpDeskSupport" class="container">
         <div class="glass-panel p-3 p-md-5">
             <h2 class="text-center mb-3">Help Desk: Friendly, Fast Support When You Need It</h2>
@@ -125,42 +102,42 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">1</div>
-                        <h4>Reconnaissance</h4>
+                        <h4 class="pb-3">Reconnaissance</h4>
                         <p>We gather information about your systems, networks, and security posture using public sources and careful investigation — just like a real attacker would.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">2</div>
-                        <h4>Scanning &amp; Enumeration</h4>
+                        <h4 class="pb-3">Scanning &amp; Enumeration</h4>
                         <p>We probe your systems for open ports, services, and potential entry points without causing disruption to your business.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">3</div>
-                        <h4>Exploitation</h4>
+                        <h4 class="pb-3">Exploitation</h4>
                         <p>With your permission, we attempt to exploit identified vulnerabilities to determine their severity and what data could be accessed.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">4</div>
-                        <h4>Post-Exploitation</h4>
+                        <h4 class="pb-3">Post-Exploitation</h4>
                         <p>We assess what an attacker could do with access we've gained — could they move laterally? Access sensitive systems? Maintain persistence?</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">5</div>
-                        <h4>Reporting</h4>
+                        <h4 class="pb-3">Reporting</h4>
                         <p>We document all findings with detailed explanations, business impact, and prioritized remediation recommendations.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="service-step">
                         <div class="step-number">6</div>
-                        <h4>Remediation Verification</h4>
+                        <h4 class="pb-3">Remediation Verification</h4>
                         <p>After you've fixed vulnerabilities, we retest to confirm they're actually resolved and can't be exploited again.</p>
                     </div>
                 </div>
@@ -174,39 +151,37 @@
         <div class="glass-panel p-3 p-md-5">
             <h2 class="text-center mb-5">How to Choose the Right Security Services</h2>
             <p class="text-center mb-4">Different businesses have different security needs. Use this guide to understand which services are right for you:</p>
-            
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Service</th>
-                            <th>Best For</th>
-                            <th>Typical Engagement</th>
-                            <th>Key Benefits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Help Desk Support</strong></td>
-                            <td>All businesses of any size</td>
-                            <td>Ongoing (monthly or as-needed)</td>
-                            <td>Reduced downtime, faster problem resolution, access to expertise</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Managed Cybersecurity</strong></td>
-                            <td>Businesses handling sensitive data or customer information</td>
-                            <td>Ongoing 24/7 monitoring</td>
-                            <td>Proactive threat detection, incident response, compliance support</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Penetration Testing</strong></td>
-                            <td>Businesses before major changes, after incidents, or annually</td>
-                            <td>Project-based (1-4 weeks)</td>
-                            <td>Identify real vulnerabilities, prioritize fixes, verify improvements</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
+            <table class="table table-responsive table-bordered table-dark">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Service</th>
+                        <th>Best For</th>
+                        <th>Typical Engagement</th>
+                        <th>Key Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-dark">
+                        <td class="text-sct-beige"><strong>Help Desk Support</strong></td>
+                        <td>All businesses of any size</td>
+                        <td>Ongoing (monthly or as-needed)</td>
+                        <td>Reduced downtime, faster problem resolution, access to expertise</td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td class="text-sct-beige"><strong>Managed Cybersecurity</strong></td>
+                        <td>Businesses handling sensitive data or customer information</td>
+                        <td>Ongoing 24/7 monitoring</td>
+                        <td>Proactive threat detection, incident response, compliance support</td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td class="text-sct-beige"><strong>Penetration Testing</strong></td>
+                        <td>Businesses before major changes, after incidents, or annually</td>
+                        <td>Project-based (1-4 weeks)</td>
+                        <td>Identify real vulnerabilities, prioritize fixes, verify improvements</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <p class="mt-4 text-center">Most of our clients use a combination of services: continuous managed security for protection, help desk support for day-to-day needs, and annual penetration testing to verify their defenses.</p>
         </div>
@@ -215,131 +190,69 @@
     <section id="CommonQuestions" class="container">
         <div class="glass-panel p-3 p-md-5">
             <h2 class="text-center mb-5">Common Questions About Our Services</h2>
-            
-            <div class="accordion accordion-flush" id="servicesAccordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-                            What makes your security services different from other providers?
-                        </button>
-                    </h3>
-                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p>Three core values set us apart:</p>
-                            <ol>
-                                <li><strong>Clarity:</strong> We explain everything in plain English. You'll understand your security posture and recommendations, not feel lost in technical jargon.</li>
-                                <li><strong>Local:</strong> We're Orange County-based and understand local business needs. You get personalized service from team members who know your market.</li>
-                                <li><strong>Accountability:</strong> We stand behind our work with transparent reporting, clear metrics, and genuine commitment to your success.</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-                            How much do your services cost?
-                        </button>
-                    </h3>
-                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p>Pricing depends on your specific situation:</p>
-                            <ul>
-                                <li><strong>Help Desk Support:</strong> Usually $X-$Y per month depending on response times and support hours</li>
-                                <li><strong>Managed Cybersecurity:</strong> Typically $X,XXX-$X,XXX monthly depending on number of endpoints, monitoring level, and incident response SLA</li>
-                                <li><strong>Penetration Testing:</strong> Usually $X,XXX-$X,XXX per engagement depending on scope and complexity</li>
-                            </ul>
-                            <p>Rather than guess, <a href="/contact-us">schedule a free security review</a>. We'll assess your situation and provide a personalized quote with no obligation.</p>
+            <div class="accordion accordion-flush" id="ServicesFAQAccordion">
+                @foreach (var faq in Model.ServicesFAQs)
+                {
+                    <div class="accordion-item mb-3">
+                        <div class="accordion-header">
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#faq@(faq.Id)" aria-expanded="false" aria-controls="#faq@(faq.Id)">
+                                @faq.Question
+                            </button>
+                        </div>
+                        <div id="faq@(faq.Id)" class="accordion-collapse collapse" data-bs-parent="#ServicesFAQAccordion">
+                            <div class="accordion-body">
+                                @Html.Raw(faq.Answer)
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-                            What's the difference between managed cybersecurity and a managed IT service provider (MSP)?
-                        </button>
-                    </h3>
-                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p><strong>Managed IT</strong> focuses on keeping your systems running: managing servers, handling backups, updating software, providing technical support. MSPs are IT-focused.</p>
-                            <p><strong>Managed Cybersecurity</strong> focuses on protecting your systems from attacks: monitoring for threats, responding to incidents, implementing security controls, improving your security posture. We're security-focused.</p>
-                            <p>Many businesses benefit from both an MSP (to keep things running) and managed cybersecurity (to keep you protected). Some MSPs offer security; we focus purely on security to provide deep expertise.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
-                            Do you help with compliance (HIPAA, PCI-DSS, GDPR, etc.)?
-                        </button>
-                    </h3>
-                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p>Yes. Compliance is a key part of our managed cybersecurity services. We help you understand requirements and implement necessary controls for:</p>
-                            <ul>
-                                <li><strong>HIPAA</strong> - Healthcare data protection</li>
-                                <li><strong>PCI-DSS</strong> - Payment card processing</li>
-                                <li><strong>GDPR/CCPA</strong> - Privacy regulations</li>
-                                <li><strong>SOC 2</strong> - Service provider controls</li>
-                                <li><strong>NIST Cybersecurity Framework</strong> - Risk management</li>
-                            </ul>
-                            <p><a href="/contact-us">Contact us</a> to discuss your specific compliance requirements.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
-                            What if we're already working with another IT provider?
-                        </button>
-                    </h3>
-                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p>No problem. We work with existing IT providers all the time. Our services complement, not replace, traditional IT support:</p>
-                            <ul>
-                                <li>We focus on security; they focus on keeping systems running</li>
-                                <li>We can work together: they handle updates, we monitor for threats</li>
-                                <li>Many of our clients have both an MSP and our security services</li>
-                            </ul>
-                            <p>We'll work collaboratively with your existing IT partner to strengthen your overall security posture.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">
-                            Do you offer trial periods or pilot programs?
-                        </button>
-                    </h3>
-                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                        <div class="accordion-body">
-                            <p>Yes. We believe in proving our value before you make a long-term commitment:</p>
-                            <ul>
-                                <li><strong>Help Desk:</strong> Start with a one-month engagement to experience our support quality</li>
-                                <li><strong>Managed Security:</strong> We can start with a 30-day pilot monitoring your critical systems</li>
-                                <li><strong>Penetration Testing:</strong> We offer limited-scope tests to evaluate our methodology before a full engagement</li>
-                            </ul>
-                            <p><a href="/contact-us">Schedule a conversation</a> about pilot options that fit your budget.</p>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
+
         </div>
     </section>
 
     <section id="GetStarted" class="container">
         <div class="glass-panel text-center p-3 p-md-5">
             <h2 class="mb-4">Ready to Strengthen Your Security?</h2>
-            <p class="lead mb-4">Let's talk about what your business needs. Our team will assess your situation and recommend services tailored to your specific risks and goals.</p>
+            <p class="mb-4">Let's talk about what your business needs. Our team will assess your situation and recommend services tailored to your specific risks and goals.</p>
             <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-                <a href="/contact-us" class="btn btn-primary btn-lg">Schedule a Free Security Review</a>
-                <a href="/faq" class="btn btn-outline-primary btn-lg">Learn More in Our FAQ</a>
+                <a href="/contact-us"><button class="button">Schedule a Free Security Review</button></a>
+                <a href="/faq" class="btn-outline"><button class="button">Learn More in Our FAQ</button></a>
             </div>
-            <p class="mt-3"><a href="/glossary">Don't understand a term?</a> Check our security glossary.</p>
+            <p class="mt-3">Don't understand a term? <a href="/glossary">Check our security glossary</a>.</p>
         </div>
     </section>
 </div>
+
+
+
+
+
+<!-- Page Schema section -->
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Services Overview", "/services-overview"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetServicesCollectionSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetLocalBusinessSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Help Desk Support", Description = "Friendly, fast IT support for businesses in Southern California. Real people answering your technical questions with clear solutions that keep your team productive.", Category = "Technical Support", Url = "/services-overview#HelpDeskSupport" }))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Managed Cybersecurity", Description = "24/7 monitoring, threat detection, and rapid incident response for comprehensive protection of your business. Proactive security measures tailored to your organization's specific needs.", Category = "Cybersecurity", Url = "/services-overview#ManagedCybersecurity" }))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetServiceSchema(new simplecybertech.Models.ServiceInfo { Name = "Penetration Testing", Description = "Ethical hacking to identify security vulnerabilities before attackers do. Comprehensive testing and actionable recommendations to strengthen your security posture.", Category = "Security Testing", Url = "/services-overview#PenetrationTesting" }))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Services Overview - Simple Cyber Technology", "Explore our comprehensive cybersecurity, managed IT, help desk support, and penetration testing services designed for Southern California small and medium-sized businesses."))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetFAQPageSchema(Model.GetServicesFAQSchemaData()))
+    </script>
+}

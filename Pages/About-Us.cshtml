@@ -7,20 +7,6 @@
     ViewData["Title"] = "About Us";
     ViewData["MetaDescription"] = "Learn about Simple Cyber Technology, founded to make enterprise-grade cybersecurity accessible to Southern California's small and medium-sized businesses.";
 }
-@section PageSchema {
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetBreadcrumbSchema("About Us", "/about-us"))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetAboutPageSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetOrganizationSchema())
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetWebPageSchema("About Us - Simple Cyber Technology", "Learn about Simple Cyber Technology, your trusted cybersecurity and IT support partner for Southern California. Enterprise-grade security with clarity, honesty, and a human touch."))
-    </script>
-}
 
 <section id="HeroSection">
     <video autoplay muted loop playsinline aria-label="About us hero background video">
@@ -33,7 +19,7 @@
     </div>
 </section>
 
-<div class="parallax-group parallax-bg">
+<div id="MainContent" class="parallax-group parallax-bg">
     <section id="OurStory" class="container">
         <div class="glass-panel p-3 p-md-5">
             <h2 class="text-center mb-3">Our Story</h2>
@@ -69,9 +55,9 @@
             <div class="row g-4">
                 <div class="col-md-6 col-xl-3">
                     <div class="glass-card h-100 p-4">
-                        <span class="icon-pill mb-3">
-                            <i class="fa-solid fa-book-journal-whills"></i>
-                        </span>
+                        <div class="icon-pill mb-3">
+                            <img src="/icon/book-journal-whills.svg" alt="Icon of a book that looks to be a journal" loading="lazy" />
+                        </div>
                         <h3 class="mb-2">Clarity</h3>
                         <p>We translate complex security concepts into plain English so you always understand what we’re doing, why, and which risks it addresses.</p>
                     </div>
@@ -80,7 +66,7 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="glass-card h-100 p-4">
                         <div class="icon-pill mb-3">
-                            <i class="fa-solid fa-user-shield"></i>
+                            <img src="/icon/user-shield.svg" alt="Icon of a user with a shield next to them" loading="lazy" />
                         </div>
                         <h3 class="mb-2">Trust</h3>
                         <p>We don’t sell fear. We’ll never recommend tools you don’t need or exaggerate threats just to close a deal.</p>
@@ -91,7 +77,7 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="glass-card h-100 p-4">
                         <div class="icon-pill mb-3">
-                            <i class="fa-solid fa-map-location-dot"></i>
+                            <img src="/icon/map-location-dot.svg" alt="Icon of a map with a location dot on it" loading="lazy" />
                         </div>
                         <h3 class="mb-2">Local Care</h3>
                         <p>We live and work where you do. As Orange County natives, we understand the pace and challenges of local businesses.</p>
@@ -101,7 +87,7 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="glass-card h-100 p-4">
                         <div class="icon-pill mb-3">
-                            <i class="fa-solid fa-check-square"></i>
+                            <img src="/icon/check-square.svg" alt="Icon of a check inside of a square" loading="lazy" />
                         </div>
                         <h3 class="mb-2">Accountability</h3>
                         <p>We stand behind our work with clear response times, transparent reporting, and measurable results.</p>
@@ -190,3 +176,22 @@
         </div>
     </section>
 </divb>
+
+
+
+
+<!-- Page Schema section -->
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("About Us", "/about-us"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetAboutPageSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetOrganizationSchema())
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("About Us - Simple Cyber Technology", "Learn about Simple Cyber Technology, your trusted cybersecurity and IT support partner for Southern California. Enterprise-grade security with clarity, honesty, and a human touch."))
+    </script>
+}

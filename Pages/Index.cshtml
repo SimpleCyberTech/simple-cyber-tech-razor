@@ -7,29 +7,21 @@
     ViewData["Title"] = "Home";
     ViewData["MetaDescription"] = "Enterprise-grade cybersecurity, IT services and help desk support for Southern California small and medium-sized businesses. Simplified security you can trust.";
 }
-@section PageSchema {
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetBreadcrumbSchema("Home", "/"))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetWebPageSchema("Simple Cyber Technology - Cybersecurity Services for Southern California", "Enterprise-grade cybersecurity, IT Services and Help Desk Support delivered with clarity, honesty, and a human touch. We protect your business, so you can focus on growth."))
-    </script>
-}
 
 <section id="HeroSection">
     <video autoPlay loop muted playsInline aria-label="Cybersecurity hero background video">
         <source src="/video/homepage-hero-section.mp4" type="video/mp4" />
     </video>
     <div class="container hero-jumbotron">
-        <h1 class="text-uppercase mb-3">CyberSecurity, Technology and Help Desk Simplified</h1>
-        <h3 class="fst-italic my-3">We protect Southern California's small and medium size businesses with stress and jargon free security you can trust. No technical gibberish, just clear solutions that keep your business safe from digital threats.</h3>
-        <a href="/contact#ContactSection" class="no-underline">
-            <button class="py-3 px-5 my-3">Schedule Your Free Security Review</button>
+        <h1 class="hero-title">CyberSecurity, Technology and Help Desk Simplified</h1>
+        <p class="hero-description mb-3">We protect Southern California's small and medium size businesses with stress and jargon free security you can trust. No technical gibberish, just clear solutions that keep your business safe from digital threats.</p>
+        <a href="/contact#ContactSection" class="no-underline mt-3">
+            <button class="button py-3 px-5 my-3">Schedule Your Security Review</button>
         </a>
     </div>
 </section>
 
-<div class="parallax-group parallax-bg">
+<div id="MainContent" class="parallax-group parallax-bg">
     <section id="ProtectYourBusiness" class="container">
         <div class="glass-panel p-3 p-md-5">
             <h2 class="text-center mb-5">Protect Your Business While Keeping Your Peace of Mind</h2>
@@ -62,7 +54,7 @@
                             <img src="/img/man-in-suit-holding-cyber-security-shield.jpg" alt="Professional holding a digital shield representing cybersecurity protection." loading="lazy" srcset="/img/man-in-suit-holding-cyber-security-shield.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Managed Cybersecurity</h3>
+                            <h4 class="card-title">Managed Cybersecurity</h4>
                             <p class="card-text">Our always-on protection services safeguard your business from the ever-evolving threat landscape. We implement robust security measures, monitor your systems 24/7, and respond rapidly to potential threats.</p>
                         </div>
                     </div>
@@ -73,7 +65,7 @@
                             <img src="/img/man-and-woman-reviewing-on-a-monitor.jpg" alt="IT professionals reviewing security data on a computer monitor." loading="lazy" srcset="/img/man-and-woman-reviewing-on-a-monitor.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Help Desk</h3>
+                            <h4 class="card-title">Help Desk</h4>
                             <p class="card-text">Get immediate assistance from real humans who understand your business needs. We provide fast, friendly IT support for everything from email issues to software glitches, ensuring your operations run smoothly.</p>
                         </div>
                     </div>
@@ -84,7 +76,7 @@
                             <img src="/img/security-lab-with-man-reviewing-monitors.jpg" alt="Security operations professional monitoring network activity and threat detection systems." loading="lazy" srcset="/img/security-lab-with-man-reviewing-monitors.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Penetration Testing</h3>
+                            <h4 class="card-title">Penetration Testing</h4>
                             <p class="card-text">Our ethical hackers think like the bad guys, but work for you. We find security gaps before attackers do, giving you actionable insights to strengthen your defenses and protect your valuable business data.</p>
                         </div>
                     </div>
@@ -105,7 +97,7 @@
                             <img src="/img/oc-local-map.jpg" alt="Aerial view map of Orange County, California highlighting local businesses." loading="lazy" srcset="/img/oc-local-map.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Local</h3>
+                            <h4 class="card-title">Local</h4>
                             <p class="card-text">Rooted in Orange County, we understand the distinct needs of businesses in Southern California.</p>
                         </div>
                     </div>
@@ -116,7 +108,7 @@
                             <img src="/img/office-working-looking-in-distance.jpg" alt="Professional woman in office setting looking thoughtfully into the distance." loading="lazy" srcset="/img/office-working-looking-in-distance.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">No Cyberspeak</h3>
+                            <h4 class="card-title">No Cyberspeak</h4>
                             <p class="card-text">We speak your language, not technical jargon. Clear communication is at the heart of everything we do.</p>
                         </div>
                     </div>
@@ -127,13 +119,26 @@
                             <img src="/img/cyber-team-looking-at-monitors.jpg" alt="Cybersecurity team monitoring security operations on multiple computer screens." loading="lazy" srcset="/img/cyber-team-looking-at-monitors.jpg 400w" sizes="(min-width: 992px) 300px, (min-width: 768px) 500px, 100vw" />
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Fast Response</h3>
+                            <h4 class="card-title">Fast Response</h4>
                             <p class="card-text">When security threats happen, our team acts swiftly to contain risks and keep your business running smoothly.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>We are more than a cybersecurity vendor. We're your local digital guardians, protecting Southern California businesses with no-nonsense security solutions, even if you're not a tech expert. <a href="/about-us">Learn about our story and values</a> or <a href="/contact-us">schedule a free security review</a> today.</p>
+            <p>We are more than a cybersecurity vendor. We're your local digital guardians, protecting Southern California businesses with no-nonsense security solutions, even if you're not a tech expert. <a href="/about-us">Learn about our story and values</a> or <a href="/contact-us">schedule a security review</a> today.</p>
         </div>
     </section>
 </div>
+
+
+
+
+<!-- Page Schema section -->
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Home", "/"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Simple Cyber Technology - Cybersecurity Services for Southern California", "Enterprise-grade cybersecurity, IT Services and Help Desk Support delivered with clarity, honesty, and a human touch. We protect your business, so you can focus on growth."))
+    </script>
+}

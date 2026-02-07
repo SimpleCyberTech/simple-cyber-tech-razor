@@ -6,14 +6,6 @@
     ViewData["Title"] = "Terms of Service";
     ViewData["MetaDescription"] = "Read the Terms of Service for Simple Cyber Technology's cybersecurity, managed IT, and help desk support services in Southern California.";
 }
-@section PageSchema {
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetBreadcrumbSchema("Terms of Service", "/terms-of-service"))
-    </script>
-    <script type="application/ld+json">
-        @Html.Raw(SchemaService.GetWebPageSchema("Terms of Service - Simple Cyber Technology", "Read the Terms of Service for Simple Cyber Technology's cybersecurity, managed IT, help desk support, and IT security services in Southern California."))
-    </script>
-}
 
 <div class="container">
 
@@ -22,7 +14,7 @@
         <p class="effective-date">Effective Date: 1/1/2026</p>
     </section>
 
-    <section>
+    <section id="MainContent">
         <h3>1. Acceptance of Terms</h3>
         <p>By accessing our website or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, you are prohibited from using this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
     </section>
@@ -143,3 +135,16 @@
     </section>
     </div>
 </div>
+
+
+
+
+<!-- Page Schema section -->
+@section PageSchema {
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetBreadcrumbSchema("Terms of Service", "/terms-of-service"))
+    </script>
+    <script type="application/ld+json">
+        @Html.Raw(SchemaService.GetWebPageSchema("Terms of Service - Simple Cyber Technology", "Read the Terms of Service for Simple Cyber Technology's cybersecurity, managed IT, help desk support, and IT security services in Southern California."))
+    </script>
+}
