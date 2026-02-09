@@ -1,9 +1,5 @@
-/* FAQ Page Scoped Styles */
-
 /* Parallax Background Image */
-.parallax-bg {
-    background-image: url("/img/background_4.jpg");
-}
+.parallax-bg { background-image: url("/img/background_6.webp"); }
 
 /* Hero Section with Teal/Blue Gradient Background */
 #HeroSection {
