@@ -29,7 +29,7 @@ public class ServicesModel : PageModel
                         <li><strong>Help desk and end-user support</strong> for everyday technical issues and troubleshooting</li>
                         <li><strong>Data backup and disaster recovery</strong> to protect critical business data and support business continuity</li>
                         <li><strong>Cyber risk assessments and security reviews</strong> to identify and reduce your highest areas of risk</li>
-                        <li><strong>Compliance and governance support</strong>, including <strong>SAMS</strong> and <strong>DOD vendor</strong> requirements for government contracts</li>
+                        <li><strong>Compliance and governance support</strong>, including <strong><a href="https://sam.gov/" target="_blank" rel="noopener noreferrer">SAMS</a></strong> and <strong><a href="https://piee.eb.mil/" target="_blank" rel="noopener noreferrer">DOD vendor</a></strong> requirements for government contracts</li>
                     </ul>
                     <p>By partnering with Simple Cyber Technology as your <strong>cybersecurity MSP</strong>, you get one team responsible for both protecting and supporting your technology environment.  Thought we still work well with other IT providers, we are a cybersecurity-first MSP and will not try to sell you services you don't need.</p>
                     """
@@ -47,7 +47,7 @@ public class ServicesModel : PageModel
                         <li><strong>Continuous vulnerability scanning and remediation</strong> to identify and fix security gaps before attackers can exploit them</li>
                         <li><strong>Email, identity, and access security</strong>, including phishing protection and multi-factor authentication (MFA)</li>
                         <li><strong>Security awareness training</strong> to help your staff recognize and avoid common cyber threats</li>
-                        <li><strong>Compliance-aligned controls</strong> designed to support standards and expectations for <strong>government agencies and contractors</strong>, including <strong>DOD-related security requirements</strong></li>
+                        <li><strong>Compliance-aligned controls</strong> designed to support standards and expectations for <strong>government agencies and contractors</strong>, including <strong><a href="https://piee.eb.mil/" target="_blank" rel="noopener noreferrer">DOD-related security requirements</a></strong></li>
                     </ul>
                     <p>This combination of managed cybersecurity tools, monitoring, and best practices helps reduce your overall risk and protects your organization from ransomware, data breaches, and other common cyber attacks.</p>
                     """
@@ -81,7 +81,7 @@ public class ServicesModel : PageModel
                         <li>Number of <strong>users</strong> and <strong>devices</strong> we manage and protect</li>
                         <li>Number of <strong>locations</strong> and whether you are on-premises, cloud, or hybrid</li>
                         <li>Level of <strong>cybersecurity controls</strong>, monitoring, and response required</li>
-                        <li><strong>Compliance requirements</strong> (such as government, DOD, or industry-specific standards)</li>
+                        <li><strong>Compliance requirements</strong> (such as government, <a href="https://piee.eb.mil/" target="_blank" rel="noopener noreferrer">DOD</a>, or industry-specific standards)</li>
                         <li>Optional advanced services, such as extended logging, endpoint detection and response (EDR), or 24/7 SOC-style monitoring</li>
                     </ul>
                     <p>We provide a clear proposal that outlines exactly what is included in your <strong>managed services plan</strong>, so you understand how your investment reduces the risk and potential cost of downtime, data loss, and cyber incidents.</p>
@@ -98,7 +98,7 @@ public class ServicesModel : PageModel
                         <li><strong>Proactive monitoring instead of reactive "break-fix" support</strong> – We work to prevent issues before they interrupt your business</li>
                         <li><strong>Security-first mindset</strong> – All technology decisions are evaluated through a cybersecurity and risk lens</li>
                         <li><strong>Integrated cybersecurity and IT management</strong> – One provider responsible for both protecting and operating your environment</li>
-                        <li><strong>Support for compliance and government work</strong> – Including <strong>SAMS</strong> and <strong>DOD vendor certifications</strong> and related security expectations</li>
+                        <li><strong>Support for compliance and government work</strong> – Including <strong><a href="https://sam.gov/" target="_blank" rel="noopener noreferrer">SAMS</a></strong> and <strong><a href="https://piee.eb.mil/" target="_blank" rel="noopener noreferrer">DOD vendor certifications</a></strong> and related security expectations</li>
                         <li><strong>Strategic guidance</strong> – Technology and security planning that supports your long-term business goals</li>
                     </ul>
                     <p>By working with a <strong>Cybersecurity MSP</strong>, you move from simply keeping systems running to actively <strong>protecting your data, reputation, and operations</strong> in a constantly changing threat landscape.</p>
