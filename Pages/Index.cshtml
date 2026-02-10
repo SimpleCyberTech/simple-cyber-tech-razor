@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model IndexModel
 @using simplecybertech.Services;
 @inject ISchemaService SchemaService;
@@ -9,7 +9,7 @@
 }
 
 <section id="HeroSection">
-    <video autoPlay loop muted playsInline aria-label="Cybersecurity hero background video">
+    <video autoplay loop muted playsinline preload="none" aria-label="Cybersecurity hero background video">
         <source src="/video/homepage-hero-section.mp4" type="video/mp4" />
     </video>
     <div class="container hero-jumbotron">
