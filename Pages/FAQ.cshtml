@@ -8,114 +8,54 @@
     ViewData["MetaDescription"] = "Frequently asked questions about Simple Cyber Technology's cybersecurity services, penetration testing, help desk support, and IT solutions for Southern California businesses.";
 }
 
-<section id="HeroSection">
-    <div class="container hero-jumbotron">
-        <h1 class="text-uppercase mb-3 hero-title">Frequently Asked Questions</h1>
-        <h3 class="fst-italic my-3 hero-description">Get answers to common questions about our cybersecurity services, response times, and how we help Southern California businesses stay secure.</h3>
+<section id="HeroSection" class="hero-gradient-teal">
+    <div class="max-w-7xl mx-auto hero-jumbotron">
+        <h1 class="uppercase mb-4 [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]">Frequently Asked Questions</h1>
+        <h3 class="italic my-4 hero-description [text-shadow:2px_2px_4px_rgba(0,0,0,0.5)]">Get answers to common questions about our cybersecurity services, response times, and how we help Southern California businesses stay secure.</h3>
     </div>
 </section>
 
-<div id="MainContent" class="parallax-group parallax-bg">
+<div id="MainContent" class="parallax-group bg-[url('/img/background_6.webp')]">
     <div class="parallax-opacity" aria-hidden="true"></div>
-    <section id="FAQContent" class="container">
+    <section id="FAQContent" class="max-w-7xl mx-auto px-4">
 
-        <div class="pb-5 text-end">
-            <button id="toggleAllBtn" class="button px-4 py-2" type="button">
+        <div class="pb-12 text-right">
+            <button id="toggleAllBtn" class="button px-6 py-2" type="button">
                 Collapse All
             </button>
         </div>
 
-        <div class="accordion accordion-flush" id="faqAccordion">
+        <div id="faqAccordion" data-accordion>
             @foreach (var faq in Model.FAQs)
             {
-                <div class="glass-panel accordion-item mb-5">
+                <div class="glass-panel accordion-item mb-12">
                     <div class="accordion-header">
-                        <button type="button" data-bs-toggle="collapse" data-bs-target="#faq@(faq.Id)" aria-expanded="true" aria-controls="#faq@(faq.Id)">
+                        <button type="button" data-accordion-toggle data-accordion-target="faq@(faq.Id)" aria-expanded="true" aria-controls="faq@(faq.Id)">
                             @faq.Question
+                            <svg class="accordion-toggle-icon rotated" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
                         </button>
                     </div>
-                    <div id="faq@(faq.Id)" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            @Html.Raw(faq.Answer)
+                    <div id="faq@(faq.Id)" class="accordion-panel">
+                        <div>
+                            <div class="accordion-body">
+                                @Html.Raw(faq.Answer)
+                            </div>
                         </div>
                     </div>
                 </div>
             }
         </div>
 
-            <div class="glass-panel mt-5 p-4"">
-                <h3 class="mb-3">Still have questions?</h3>
-                <p class="mb-3">We're here to help. Reach out to our team:</p>
-                <ul class="list-unstyled">
-                    <li><strong>Phone:</strong> <a href="tel:9495206805">(949) 520-6805</a></li>
-                    <li><strong>Schedule a call:</strong> <a href="/contact-us">Book a free consultation online</a></li>
-                </ul>
-            </div>
+        <div class="glass-panel mt-12 p-6">
+            <h3 class="mb-4">Still have questions?</h3>
+            <p class="mb-4">We're here to help. Reach out to our team:</p>
+            <ul class="list-none space-y-2">
+                <li><strong>Phone:</strong> <a href="tel:9495206805">(949) 520-6805</a></li>
+                <li><strong>Book a Meeting:</strong> <a href="/contact-us">Schedule a free consultation online</a></li>
+            </ul>
         </div>
     </section>
 </div>
-
-@section Scripts {
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleBtn = document.getElementById('toggleAllBtn');
-            const accordion = document.getElementById('faqAccordion');
-            let allExpanded = true; // Start with all expanded
-            
-            toggleBtn.addEventListener('click', function() {
-                const collapseElements = accordion.querySelectorAll('.accordion-collapse');
-                const accordionButtons = accordion.querySelectorAll('.accordion-button');
-                
-                if (allExpanded) {
-                    // Collapse all
-                    collapseElements.forEach(element => {
-                        const bsCollapse = bootstrap.Collapse.getInstance(element) || new bootstrap.Collapse(element, { toggle: false });
-                        bsCollapse.hide();
-                    });
-                    accordionButtons.forEach(btn => {
-                        btn.classList.add('collapsed');
-                        btn.setAttribute('aria-expanded', 'false');
-                    });
-                    toggleBtn.textContent = 'Expand All';
-                    allExpanded = false;
-                } else {
-                    // Expand all
-                    collapseElements.forEach(element => {
-                        const bsCollapse = bootstrap.Collapse.getInstance(element) || new bootstrap.Collapse(element, { toggle: false });
-                        bsCollapse.show();
-                    });
-                    accordionButtons.forEach(btn => {
-                        btn.classList.remove('collapsed');
-                        btn.setAttribute('aria-expanded', 'true');
-                    });
-                    toggleBtn.textContent = 'Collapse All';
-                    allExpanded = true;
-                }
-            });
-            
-            // Update button state when individual accordions are toggled
-            accordion.addEventListener('shown.bs.collapse', updateButtonState);
-            accordion.addEventListener('hidden.bs.collapse', updateButtonState);
-            
-            function updateButtonState() {
-                const collapseElements = accordion.querySelectorAll('.accordion-collapse');
-                const expandedCount = accordion.querySelectorAll('.accordion-collapse.show').length;
-                
-                if (expandedCount === collapseElements.length) {
-                    toggleBtn.textContent = 'Collapse All';
-                    allExpanded = true;
-                } else if (expandedCount === 0) {
-                    toggleBtn.textContent = 'Expand All';
-                    allExpanded = false;
-                } else {
-                    // Some expanded, some collapsed - show "Collapse All" to guide user
-                    toggleBtn.textContent = 'Collapse All';
-                    allExpanded = true;
-                }
-            }
-        });
-    </script>
-}
 
 
 

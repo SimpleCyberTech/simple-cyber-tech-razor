@@ -23,180 +23,162 @@
     </script>
 }
 
-<section id="HeroSection">
+<section id="HeroSection" class="city-hero">
     <video autoplay muted loop playsinline aria-label="Services location page hero background video">
         <source src="/video/about-us-hero-section.mp4" type="video/mp4" />
     </video>
-    <div class="video-overlay" aria-hidden="true"></div>
-    <div class="container hero-jumbotron">
-        <h1 class="text-uppercase mb-3">Cybersecurity Services in @Model.CityName</h1>
-        <h3 class="fst-italic my-3">Local, expert cybersecurity protection for @Model.CityName businesses. We're right here in Southern California, ready to protect your business from cyber threats.</h3>
+    <div class="video-overlay hero-overlay-warm" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto hero-jumbotron">
+        <h1 class="uppercase mb-4">Cybersecurity Services in @Model.CityName</h1>
+        <h3 class="italic my-4">Local, expert cybersecurity protection for @Model.CityName businesses. We're right here in Southern California, ready to protect your business from cyber threats.</h3>
     </div>
 </section>
 
-<div class="container py-5">
+<div class="max-w-7xl mx-auto px-4 py-12">
     <section id="LocalServices">
-        <div class="glass-panel p-3 p-md-5">
-            <h2 class="text-center mb-4">Why Choose Simple Cyber Technology for Your @Model.CityName Business?</h2>
+        <div class="glass-panel p-4 md:p-12">
+            <h2 class="text-center mb-6">Why Choose Simple Cyber Technology for Your @Model.CityName Business?</h2>
             
-            <div class="row mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <p class="lead">We know @Model.CityName. We understand the unique security challenges facing businesses in our community—whether you're a startup in the tech corridor, a retail business serving local customers, or an established company managing sensitive data.</p>
-                    
-                    <p>Simple Cyber Technology is based right here in Costa Mesa, serving @Model.CityName and throughout Southern California. We're not a distant enterprise vendor. We're your local security partner, committed to understanding your business, your industry, and your specific security needs.</p>
+            <div class="max-w-4xl mx-auto mb-12">
+                <p class="text-lg">We know @Model.CityName. We understand the unique security challenges facing businesses in our community—whether you're a startup in the tech corridor, a retail business serving local customers, or an established company managing sensitive data.</p>
+                
+                <p class="mt-4">Simple Cyber Technology is based right here in Costa Mesa, serving @Model.CityName and throughout Southern California. We're not a distant enterprise vendor. We're your local security partner, committed to understanding your business, your industry, and your specific security needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="service-card">
+                    <div class="text-5xl text-sct-maroon mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Managed Cybersecurity</h3>
+                    <p>24/7 monitoring, threat detection, and rapid response to keep your @Model.CityName business protected around the clock.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="text-5xl text-sct-maroon mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Help Desk Support</h3>
+                    <p>Real people answering your technical questions. Fast, friendly support from team members who care about your success.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="text-5xl text-sct-maroon mb-4">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <p>Ethical hacking to find security gaps before attackers do. Actionable recommendations to strengthen your defenses.</p>
                 </div>
             </div>
 
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Managed Cybersecurity</h3>
-                        <p>24/7 monitoring, threat detection, and rapid response to keep your @Model.CityName business protected around the clock.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Help Desk Support</h3>
-                        <p>Real people answering your technical questions. Fast, friendly support from team members who care about your success.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <h3>Penetration Testing</h3>
-                        <p>Ethical hacking to find security gaps before attackers do. Actionable recommendations to strengthen your defenses.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-center mb-4">Our Commitment to @Model.CityName Businesses</h3>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <ul class="commitment-list">
-                        <li><strong>Local Presence:</strong> Based in Costa Mesa, we serve @Model.CityName directly with personalized, hands-on support.</li>
-                        <li><strong>Clear Communication:</strong> We explain cybersecurity in plain language, not technical jargon that confuses.</li>
-                        <li><strong>Scalable Solutions:</strong> From small startups to established companies, we tailor security to fit your size and budget.</li>
-                        <li><strong>24/7 Monitoring:</strong> Your business doesn't stop at 5pm, and neither do we. Round-the-clock protection and rapid response.</li>
-                        <li><strong>Industry Expertise:</strong> We work with businesses across various industries in @Model.CityName and Southern California.</li>
-                        <li><strong>Proven Results:</strong> Our clients trust us to protect their most valuable assets—their data and reputation.</li>
-                    </ul>
-                </div>
+            <h3 class="text-center mb-6">Our Commitment to @Model.CityName Businesses</h3>
+            <div class="max-w-4xl mx-auto">
+                <ul class="commitment-list">
+                    <li><strong>Local Presence:</strong> Based in Costa Mesa, we serve @Model.CityName directly with personalized, hands-on support.</li>
+                    <li><strong>Clear Communication:</strong> We explain cybersecurity in plain language, not technical jargon that confuses.</li>
+                    <li><strong>Scalable Solutions:</strong> From small startups to established companies, we tailor security to fit your size and budget.</li>
+                    <li><strong>24/7 Monitoring:</strong> Your business doesn't stop at 5pm, and neither do we. Round-the-clock protection and rapid response.</li>
+                    <li><strong>Industry Expertise:</strong> We work with businesses across various industries in @Model.CityName and Southern California.</li>
+                    <li><strong>Proven Results:</strong> Our clients trust us to protect their most valuable assets—their data and reputation.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="WhyLocal" class="my-5">
-        <div class="glass-panel p-3 p-md-5">
-            <h2 class="text-center mb-4">Why Local Cybersecurity Matters</h2>
+    <section id="WhyLocal" class="my-12">
+        <div class="glass-panel p-4 md:p-12">
+            <h2 class="text-center mb-6">Why Local Cybersecurity Matters</h2>
             
             <p>When you choose Simple Cyber Technology for your @Model.CityName business, you're choosing a partner who understands your local market, your industry peers, and the specific threats targeting Southern California businesses.</p>
             
-            <div class="row mt-4">
-                <div class="col-lg-6">
-                    <h4><i class="fas fa-check-circle text-sct-maroon me-2"></i>Faster Response Times</h4>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                <div>
+                    <h4 class="mb-2">Faster Response Times</h4>
                     <p>Local support means quicker response to issues and emergencies affecting your @Model.CityName location.</p>
                 </div>
-                <div class="col-lg-6">
-                    <h4><i class="fas fa-check-circle text-sct-maroon me-2"></i>Better Understanding</h4>
+                <div>
+                    <h4 class="mb-2">Better Understanding</h4>
                     <p>We understand @Model.CityName's business ecosystem and the unique security challenges you face.</p>
                 </div>
-                <div class="col-lg-6">
-                    <h4><i class="fas fa-check-circle text-sct-maroon me-2"></i>Personal Relationships</h4>
+                <div>
+                    <h4 class="mb-2">Personal Relationships</h4>
                     <p>You're not a ticket number. You're a valued member of our @Model.CityName business community.</p>
                 </div>
-                <div class="col-lg-6">
-                    <h4><i class="fas fa-check-circle text-sct-maroon me-2"></i>Community Investment</h4>
+                <div>
+                    <h4 class="mb-2">Community Investment</h4>
                     <p>Your success is our success. We're invested in @Model.CityName's economic growth and security.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="GetStarted" class="my-5">
-        <div class="glass-panel text-center p-3 p-md-5">
-            <h2 class="mb-4">Ready to Secure Your @Model.CityName Business?</h2>
+    <section id="GetStarted" class="my-12">
+        <div class="glass-panel text-center p-4 md:p-12">
+            <h2 class="mb-6">Ready to Secure Your @Model.CityName Business?</h2>
             
-            <p class="lead mb-4">Start with a free security review. Our team will assess your current security posture and provide personalized recommendations.</p>
+            <p class="text-lg mb-6">Start with a free security review. Our team will assess your current security posture and provide personalized recommendations.</p>
             
-            <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
-                <a href="/contact-us" class="btn btn-primary btn-lg">Schedule a Free Review</a>
-                <a href="tel:9495206805" class="btn btn-outline-primary btn-lg">Call (949) 520-6805</a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="/contact-us" class="btn-primary-custom">Schedule a Free Review</a>
+                <a href="tel:9495206805" class="btn-outline-custom">Call (949) 520-6805</a>
             </div>
 
-            <p class="mt-4 text-muted">Available Monday-Friday, 8am-6pm PST</p>
+            <p class="mt-6 text-sct-silver text-sm">Available Monday-Friday, 8am-6pm PST</p>
         </div>
     </section>
 
-    <section id="ServiceCallout" class="my-5">
-        <div class="glass-panel p-3 p-md-5">
-            <h2 class="text-center mb-4">What We Serve @Model.CityName Businesses</h2>
-            <p class="text-center mb-5">As a trusted security partner in @Model.CityName, we provide three core services tailored to protect your business:</p>
+    <section id="ServiceCallout" class="my-12">
+        <div class="glass-panel p-4 md:p-12">
+            <h2 class="text-center mb-6">What We Serve @Model.CityName Businesses</h2>
+            <p class="text-center mb-12">As a trusted security partner in @Model.CityName, we provide three core services tailored to protect your business:</p>
             
-            <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                    <div class="service-callout">
-                        <h3 class="text-sct-maroon mb-3">Help Desk Support</h3>
-                        <p>When your team needs IT help, we're here. Fast, friendly support from real people who understand @Model.CityName businesses.</p>
-                        <ul class="small">
-                            <li>Immediate troubleshooting</li>
-                            <li>User-friendly explanations</li>
-                            <li>Minimal downtime</li>
-                        </ul>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="service-callout">
+                    <h3 class="text-sct-maroon mb-4">Help Desk Support</h3>
+                    <p>When your team needs IT help, we're here. Fast, friendly support from real people who understand @Model.CityName businesses.</p>
+                    <ul class="text-sm">
+                        <li>Immediate troubleshooting</li>
+                        <li>User-friendly explanations</li>
+                        <li>Minimal downtime</li>
+                    </ul>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="service-callout">
-                        <h3 class="text-sct-blue mb-3">Managed Cybersecurity</h3>
-                        <p>Enterprise-grade protection 24/7. We monitor your systems, detect threats, and respond rapidly to keep @Model.CityName businesses secure.</p>
-                        <ul class="small">
-                            <li>24/7 threat monitoring</li>
-                            <li>Rapid incident response</li>
-                            <li>Compliance support</li>
-                        </ul>
-                    </div>
+                <div class="service-callout">
+                    <h3 class="text-sct-blue mb-4">Managed Cybersecurity</h3>
+                    <p>Enterprise-grade protection 24/7. We monitor your systems, detect threats, and respond rapidly to keep @Model.CityName businesses secure.</p>
+                    <ul class="text-sm">
+                        <li>24/7 threat monitoring</li>
+                        <li>Rapid incident response</li>
+                        <li>Compliance support</li>
+                    </ul>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="service-callout">
-                        <h3 class="text-sct-maroon mb-3">Penetration Testing</h3>
-                        <p>Find security gaps before attackers do. Our ethical hackers test your defenses and provide actionable recommendations for @Model.CityName businesses.</p>
-                        <ul class="small">
-                            <li>Comprehensive testing</li>
-                            <li>Vulnerability identification</li>
-                            <li>Remediation guidance</li>
-                        </ul>
-                    </div>
+                <div class="service-callout">
+                    <h3 class="text-sct-maroon mb-4">Penetration Testing</h3>
+                    <p>Find security gaps before attackers do. Our ethical hackers test your defenses and provide actionable recommendations for @Model.CityName businesses.</p>
+                    <ul class="text-sm">
+                        <li>Comprehensive testing</li>
+                        <li>Vulnerability identification</li>
+                        <li>Remediation guidance</li>
+                    </ul>
                 </div>
             </div>
 
-            <p class="text-center text-muted small">Learn more about <a href="/services-overview">all our services and solutions</a>.</p>
+            <p class="text-center text-sct-silver text-sm">Learn more about <a href="/services-overview">all our services and solutions</a>.</p>
         </div>
     </section>
 
-    <section id="ServiceAreas" class="my-5">
-        <div class="glass-panel p-3 p-md-5">
-            <h2 class="text-center mb-4">Service Areas</h2>
-            <p class="text-center mb-4">Simple Cyber Technology proudly serves @Model.CityName and the following communities throughout Southern California:</p>
+    <section id="ServiceAreas" class="my-12">
+        <div class="glass-panel p-4 md:p-12">
+            <h2 class="text-center mb-6">Service Areas</h2>
+            <p class="text-center mb-6">Simple Cyber Technology proudly serves @Model.CityName and the following communities throughout Southern California:</p>
             
-            <div class="row g-2">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2">
                 @foreach (var city in Model.NearbyServices)
                 {
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <a href="/services/@city.Key" class="service-link">
-                            <i class="fas fa-map-marker-alt me-2"></i>@city.Value
-                        </a>
-                    </div>
+                    <a href="/services/@city.Key" class="service-link">
+                        @city.Value
+                    </a>
                 }
             </div>
         </div>

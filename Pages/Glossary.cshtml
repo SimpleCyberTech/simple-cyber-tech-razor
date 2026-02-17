@@ -8,52 +8,48 @@
     ViewData["MetaDescription"] = "Glossary of cybersecurity, IT security, and technology terms. Clear definitions for small business owners and decision-makers. Learn key security concepts from Simple Cyber Technology.";
 }
 
-<section id="HeroSection">
-    <div class="container hero-jumbotron">
-        <h1 class="text-uppercase mb-3">Cybersecurity Glossary</h1>
-        <h3 class="fst-italic my-3">Plain-English explanations of cybersecurity and IT terms, so you can understand your security better.</h3>
+<section id="HeroSection" class="hero-gradient-warm">
+    <div class="max-w-7xl mx-auto hero-jumbotron">
+        <h1 class="uppercase mb-4">Cybersecurity Glossary</h1>
+        <h3 class="italic my-4">Plain-English explanations of cybersecurity and IT terms, so you can understand your security better.</h3>
     </div>
 </section>
 
-<div id="MainContent" class="parallax-group parallax-bg py-5">
+<div id="MainContent" class="parallax-group bg-[url('/img/background_5.webp')] py-12">
     <div class="parallax-opacity" aria-hidden="true"></div>
-    <section id="GlossaryNavigation" class="container">
-        <div class="glass-panel p-3 p-md-5">
-            <p class="text-center pb-5">Cybersecurity can be intimidating with all the technical jargon. This glossary explains key security and IT terms in plain English. Select a letter below to jump to terms starting with that letter.</p>
+    <section id="GlossaryNavigation" class="max-w-7xl mx-auto px-4">
+        <div class="glass-panel p-4 md:p-12">
+            <p class="text-center pb-12">Cybersecurity can be intimidating with all the technical jargon. This glossary explains key security and IT terms in plain English. Select a letter below to jump to terms starting with that letter.</p>
 
-            <div class="row g-2 justify-content-center">
+            <div class="flex flex-wrap gap-2 justify-center">
                 @foreach (var letter in Model.TermsByLetter.Keys)
                 {
-                    <div class="col-auto">
-                        <a href="#letter-@letter" class="btn btn-sm btn-outline-primary">@letter</a>
-                    </div>
+                    <a href="#letter-@letter" class="glossary-btn">@letter</a>
                 }
             </div>
         </div>
     </section>
 
-    <section id="GlossaryContent" class="container">
+    <section id="GlossaryContent" class="max-w-7xl mx-auto px-4">
         @foreach (var letterGroup in Model.TermsByLetter)
         {
-            <div class="glass-panel p-3 p-md-5 my-3 my-md-5" id="letter-@letterGroup.Key">
+            <div class="glass-panel p-4 md:p-12 my-4 md:my-12 scroll-mt-24" id="letter-@letterGroup.Key">
                 <h2 class="glossary-letter">@letterGroup.Key</h2>
                 @foreach (var term in letterGroup.Value)
                 {
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">@term.Term</h4>
-                            <p class="card-text">@term.Definition</p>
-                        </div>
+                    <div class="mt-4 mb-4 bg-white/20 border-l-[1rem] border-l-sct-maroon rounded p-6">
+                        <h4 class="text-white mb-4">@term.Term</h4>
+                        <p class="text-sct-silver">@term.Definition</p>
                     </div>
                 }
             </div>
         }
     </section>
         
-    <section id="GlossaryContact" class="container mb-5">
-        <div class="glass-panel p-4">
+    <section id="GlossaryContact" class="max-w-7xl mx-auto px-4 mb-12">
+        <div class="glass-panel p-6">
             <h2>Still Need Clarification?</h2>
-            <p class="py-3">Don't see a term you're looking for? Want to discuss how these concepts apply to your business? Our team can explain cybersecurity in a way that makes sense to you.</p>
+            <p class="py-4">Don't see a term you're looking for? Want to discuss how these concepts apply to your business? Our team can explain cybersecurity in a way that makes sense to you.</p>
             <p><a href="/contact-us"><button class="button">Get in Touch</button></a></p>
         </div>
     </section>

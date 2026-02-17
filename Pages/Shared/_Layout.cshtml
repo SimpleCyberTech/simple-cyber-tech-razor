@@ -43,13 +43,12 @@
     <link rel="icon" type="image/x-icon" href="~/img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/SimpleCyberTech.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@600&display=swap" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
     
 </head>
-<body class="font-roboto-regular">
+<body class="font-regular">
     <!-- Accessibility: Skip to main content link -->
     <a href="#MainContent" class="skip-link">Skip to main content</a>
     
@@ -58,109 +57,111 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-dark px-3" aria-label="Main navigation">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="/img/logo-company-name-horizontal-dark.webp" alt="Simple Cyber Technology - Home" class="navbar-logo" /></a>
-                <button class="button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <header class="sticky top-0 z-50 bg-sct-espresso">
+        <nav class="p-4" aria-label="Main navigation">
+            <div class="flex items-center justify-between">
+                <a asp-area="" asp-page="/Index">
+                    <img src="/img/logo-company-name-horizontal-dark.webp" alt="Simple Cyber Technology - Home" class="w-full max-w-[200px] sm:max-w-[250px]" />
+                </a>
+                <button id="navToggle" class="xl:hidden text-white p-2" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNav">
-                    <ul class="navbar-nav pt-5 pt-xl-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about-us">About Us</a>
+                <div id="navMenu" class="hidden xl:flex xl:flex-row xl:items-center xl:flex-1 xl:justify-center w-full xl:w-auto text-xl absolute xl:static top-full left-0 bg-sct-espresso xl:bg-transparent">
+                    <ul class="flex flex-col xl:flex-row text-center pt-12 xl:pt-0">
+                        <li class="px-4">
+                            <a class="block py-2 xl:py-0 text-sct-beige hover:text-sct-silver transition-colors" href="/about-us">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/services-overview">Our Services</a>
+                        <li class="px-4">
+                            <a class="block py-2 xl:py-0 text-sct-beige hover:text-sct-silver transition-colors" href="/services-overview">Our Services</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact-us">Contact Us</a>
+                        <li class="px-4">
+                            <a class="block py-2 xl:py-0 text-sct-beige hover:text-sct-silver transition-colors" href="/contact-us">Contact Us</a>
                         </li>
-                        <li class="nav-item d-xl-none">
-                            <a href="/contact#ContactSection">
-                                <button class="button w-100 py-3 my-5" style="max-width: 500px;">Schedule a Call</button>
+                        <li class="xl:hidden">
+                            <a href="/contact-us#ContactSection">
+                                <button class="button w-full py-4 my-12 max-w-[500px]">Book a Meeting</button>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <a href="/contact#ContactSection" class="d-none d-xl-block">
-                    <button class="button fs-6 px-3 py-2">Schedule a Call</button>
+                <a href="/contact-us#ContactSection" class="hidden xl:block">
+                    <button class="button text-base px-4 py-2">Book a Meeting</button>
                 </a>
             </div>
         </nav>
     </header>
-    <div class="container-fluid px-0">
+    <div class="w-full">
         <main role="main" id="main-content">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="footer" role="contentinfo">
-        <div class="footer-top">
-            <div class="container row justify-content-between mx-auto">
-                <div class="col-auto mb-3 order-lg-2">
-                    <h4 class="pb-3">Company Info</h4>
-                    <ul class="list-unstyled">
+    <footer class="text-sct-beige bg-sct-espresso" role="contentinfo">
+        <div class="bg-sct-roasted p-12 max-[360px]:px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="mb-4 lg:order-2">
+                    <h4 class="pb-4 text-sct-silver">Company Info</h4>
+                    <ul class="list-none space-y-1">
                         <li>949 South Coast Drive, Suite 280</li>
                         <li>Costa Mesa, CA 92626</li>
-                        <li class="mb-3"><a href="tel:9495206805">(949) 520-6805</a></li>
-                        <li>Mon-Fri: 8am - 6pm (PST)</li>
+                        <li class="mb-4"><a href="tel:9495206805">(949) 520-6805</a></li>
+                        <li>Mon-Fri: 8am - 5pm (PST)</li>
                         <li>Sat-Sun: Closed</li>
                     </ul>
                 </div>
-                <div class="col-auto mb-3 order-lg-3">
-                    <h4 class="pb-3">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="/index" class="">Home</a></li>
-                        <li><a href="/services-overview" class="">Services</a></li>
-                        <li><a href="/about-us" class="">About Us</a></li>
-                        <li><a href="/contact-us" class="">Contact</a></li>
-                        <li><a href="/faq" class="">FAQ</a></li>
-                        <li><a href="/glossary" class="">Glossary</a></li>
-                        <li><a href="/privacy-policy" class="">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service" class="">Terms of Service</a></li>
+                <div class="mb-4 lg:order-3">
+                    <h4 class="pb-4 text-sct-silver">Quick Links</h4>
+                    <ul class="list-none space-y-1">
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/services-overview">Services</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/contact-us">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/glossary">Glossary</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-auto mx-auto mx-xl-0 order-lg-1">
-                    <div class="mb-4"><img src="/img/logo-company-name-horizontal-dark.webp" alt="Simple Cyber Tech Logo" class="footer-logo img-fluid" loading="lazy"/></div>
-                    <ul class="list-inline d-flex justify-content-between">
-                        <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/company/simplecybertech/" target="_blank" rel="noopener noreferrer" class="text-decoration-none d-flex align-items-center" aria-label="Visit Simple Cyber Technology on LinkedIn">
-                                <img src="/icon/linkedin.svg" alt="Icon of the LinkedIn logo" width="35" height="35" class="footer-social-icon me-2" loading="lazy">
+                <div class="mx-auto xl:mx-0 lg:order-1">
+                    <div class="mb-6"><img src="/img/logo-company-name-horizontal-dark.webp" alt="Simple Cyber Tech Logo" class="w-full max-w-[250px] sm:max-w-[300px]" loading="lazy"/></div>
+                    <ul class="flex justify-between list-none w-full max-w-[250px] sm:max-w-[300px]">
+                        <li>
+                            <a href="https://www.linkedin.com/company/simplecybertech/" target="_blank" rel="noopener noreferrer" class="no-underline flex items-center" aria-label="Visit Simple Cyber Technology on LinkedIn">
+                                <img src="/icon/linkedin.svg" alt="Icon of the LinkedIn logo" width="35" height="35" class="footer-social-icon" loading="lazy">
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="https://x.com/simplecybertech" target="_blank" rel="noopener noreferrer" class="text-decoration-none d-flex align-items-center" aria-label="Visit Simple Cyber Technology on Twitter">
-                                <img src="/icon/twitter.svg" alt="Icon of the X/Twitter logo" width="35" height="35" class="footer-social-icon me-2" loading="lazy" />
+                        <li>
+                            <a href="https://x.com/simplecybertech" target="_blank" rel="noopener noreferrer" class="no-underline flex items-center" aria-label="Visit Simple Cyber Technology on Twitter">
+                                <img src="/icon/twitter.svg" alt="Icon of the X/Twitter logo" width="35" height="35" class="footer-social-icon" loading="lazy" />
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/simplecybertech" target="_blank" rel="noopener noreferrer" class="text-decoration-none d-flex align-items-center" aria-label="Visit Simple Cyber Technology on Facebook">
-                                <img src="/icon/facebook.svg" alt="Icon of the Facebook logo" width="35" height="35" class="footer-social-icon me-2" loading="lazy" />
+                        <li>
+                            <a href="https://www.facebook.com/simplecybertech" target="_blank" rel="noopener noreferrer" class="no-underline flex items-center" aria-label="Visit Simple Cyber Technology on Facebook">
+                                <img src="/icon/facebook.svg" alt="Icon of the Facebook logo" width="35" height="35" class="footer-social-icon" loading="lazy" />
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/simplecybertechnology" target="_blank" rel="noopener noreferrer" class="text-decoration-none d-flex align-items-center" aria-label="Visit Simple Cyber Technology on Instagram">
-                                <img src="/icon/instagram.svg" alt="Icon of the Instagram logo" width="35" height="35" class="footer-social-icon me-2" loading="lazy" />
+                        <li>
+                            <a href="https://www.instagram.com/simplecybertechnology" target="_blank" rel="noopener noreferrer" class="no-underline flex items-center" aria-label="Visit Simple Cyber Technology on Instagram">
+                                <img src="/icon/instagram.svg" alt="Icon of the Instagram logo" width="35" height="35" class="footer-social-icon" loading="lazy" />
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.youtube.com/@@simplecybertech" target="_blank" rel="noopener noreferrer" class="text-decoration-none d-flex align-items-center" aria-label="Visit Simple Cyber Technology on YouTube">
-                                <img src="/icon/youtube.svg" alt="Icon of the YouTube logo" width="35" height="35" class="footer-social-icon me-2" loading="lazy" />
+                        <li>
+                            <a href="https://www.youtube.com/@@simplecybertech" target="_blank" rel="noopener noreferrer" class="no-underline flex items-center" aria-label="Visit Simple Cyber Technology on YouTube">
+                                <img src="/icon/youtube.svg" alt="Icon of the YouTube logo" width="35" height="35" class="footer-social-icon" loading="lazy" />
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container text-center py-3">
+        <div class="max-w-7xl mx-auto text-center py-4">
             <p>&copy; 2026 Simple Cyber Technology.  All rights reserved.</p>
-            <p class="small text-sct-silver">Simple Cyber Technology is a DBA of Simple Teck Solutions, Inc.</p>
+            <p class="text-sm text-sct-silver">Simple Cyber Technology is a DBA of Simple Teck Solutions, Inc.</p>
         </div>
     </footer>
 
-    <script defer src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
