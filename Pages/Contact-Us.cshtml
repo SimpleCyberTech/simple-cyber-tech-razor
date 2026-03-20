@@ -26,10 +26,9 @@
             <h2>Get In Touch With Us</h2>
             <p>Please use our calendar widget to book a free call with a specialist. Find out about our different services or bring any questions that you may have. If you want to reach us immediately or have an urgent matter, please call us at (949) 520-6805.</p>
             <div class="justify-content-center my-3">
-                <iframe 
-                    src="https://api.leadconnectorhq.com/widget/booking/KBeG8jBiHmtmZmvXSrQv" 
-                    style="width: 100%; border:none; overflow: hidden;" 
-                    scrolling="no" 
+                <iframe
+                    src="https://api.leadconnectorhq.com/widget/booking/KBeG8jBiHmtmZmvXSrQv"
+                    style="width: 100%; border: none;"
                     id="KBeG8jBiHmtmZmvXSrQv_1769558186400">
                 </iframe>
             </div>
@@ -41,6 +40,21 @@
 
 <!-- Javascript for Msgsndr form embed -->
 <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+<script>
+    window.addEventListener('message', function (e) {
+        if (e.origin.indexOf('leadconnectorhq.com') === -1 && e.origin.indexOf('msgsndr.com') === -1) return;
+        var iframe = document.getElementById('KBeG8jBiHmtmZmvXSrQv_1769558186400');
+        if (!iframe) return;
+        var data = e.data;
+        if (typeof data === 'string') {
+            try { data = JSON.parse(data); } catch (err) { return; }
+        }
+        var height = data.height || (data.frameHeight) || null;
+        if (height && parseInt(height) > 0) {
+            iframe.style.height = parseInt(height) + 'px';
+        }
+    });
+</script>
 
 <!-- Page Schema section -->
 @section PageSchema {

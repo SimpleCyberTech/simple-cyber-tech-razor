@@ -5,6 +5,12 @@
 iframe {
     display: block !important;
     width: 100% !important;
+    min-height: 800px;
+    height: auto;
     border: none;
     margin: 0 auto;
+}
+
+#ContactSection .glass-panel {
+    overflow: visible;
 }
